@@ -4,10 +4,14 @@ body {
 
 canvas {
   position: absolute;
-  margin-left: 22%;
-  border: 2px solid white;
+  /* margin-left: 22%;
+  border: 2px solid black; */
 }
 
 label {
   color: white;
+}
+
+button {
+  background-color: white
 }
