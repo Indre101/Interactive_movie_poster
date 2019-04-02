@@ -141,3 +141,11 @@ div {
 
 
 }
+
+.bloodwave {
+  background-image: url("./images/bloodwave.png");
+  width: 500px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
