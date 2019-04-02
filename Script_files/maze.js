@@ -30,13 +30,13 @@ const canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 const child = new Image();
-child.src = "./images/door.jpg";
+child.src = "./images/wall.png";
 
 let mother = new Image();
-mother.src = "./images/building.jpg";
+mother.src = "./images/reddoors.gif";
 
 let wall = new Image;
-wall.src = "./images/wall.png";
+wall.src = "./images/building1.jpg";
 
 let maze = [];
 
