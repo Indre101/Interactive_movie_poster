@@ -44,7 +44,7 @@ let player = new Object({
   x: 0,
   y: 1,
   loc: 15,
-  moves: 4
+  moves: 0
 })
 
 
