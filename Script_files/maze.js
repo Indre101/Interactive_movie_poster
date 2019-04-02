@@ -36,7 +36,7 @@ let mother = new Image();
 mother.src = "./images/reddoors.gif";
 
 let wall = new Image;
-wall.src = "./images/building1.jpg";
+wall.src = "./images/bush_winter.png";
 
 let maze = [];
 
