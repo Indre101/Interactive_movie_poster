@@ -1,14 +1,13 @@
-// const btn1 = document.getElementById("btn");
+const btn1 = document.getElementById("btn");
 
 
-// btn1.onclick = function () {
-//   this.disabled = true;
-//   start();
-
-// }
+btn1.onclick = function () {
+  this.disabled = true;
+  start();
+}
 
 let template = [
-  1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1,
+  1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1,
   0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0,
   1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0,
   1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0,
@@ -138,6 +137,7 @@ function keyPress(e) {
 }
 
 function start() {
+  console.log(true)
   for (let i = 0; i < 15 * 15; i++) {
     if (maze[i].state == 1 || maze[i].state == "1")
       ctx.drawImage(wall, maze[i].x * 32, maze[i].y * 32, 32, 32);
@@ -152,3 +152,4 @@ function start() {
   window.addEventListener("keydown", keyPress, true);
 
 }
+
