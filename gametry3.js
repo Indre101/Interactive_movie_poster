@@ -6,7 +6,7 @@ let door1;
 let door2;
 let door3;
 
-let closed = "door.jpg";
+let closed = "./images/door.jpg";
 let numOfClosedDoors = 3;
 
 let firstDoor = document.getElementById("firstDoor");
@@ -44,10 +44,10 @@ const isTheDoorWrong = door => (door.getAttribute("src") === spiderman) ? true :
 function areAllOpen(door) {
   numOfClosedDoors--;
 
-  if (numOfClosedDoors === 0) {
-    gameOver("win");
-  } else if (isTheDoorWrong(door)) {
+  if (!isTheDoorWrong(door)) {
     gameOver();
+  } else if (isTheDoorWrong(door)) {
+    gameOver("win");
   }
 }
 
@@ -64,6 +64,9 @@ function radomPhotoToDoors(maxNumberToEnter) {
     case 1:
       return building1;
       break;
+    case 2:
+      return building1;
+      break;
 
     default:
       return spiderman;
@@ -74,7 +77,7 @@ function radomPhotoToDoors(maxNumberToEnter) {
 //door opening with photos
 
 function openDoors() {
-  let randomScenario = Math.floor(Math.random() * 2);
+  let randomScenario = Math.floor(Math.random() * 3);
 
   if (randomScenario === 0) {
     door1 = spiderman;
