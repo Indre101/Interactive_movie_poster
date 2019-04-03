@@ -12,7 +12,7 @@
 }
 
 .container1 {
-  background-image: url("../images/hallway-03-03.png");
+  background-image: url("../images/hallway-03.png");
 }
 
 .fadeout {
@@ -96,7 +96,8 @@
   height: 150px;
   margin-right: -50px;
   cursor: pointer;
-  animation: appearKey 2s 4s forwards ease-in infinite;
+  animation: appearKey 2s 3s forwards ease-in infinite;
+  /* z-index: 1000; */
 
 }
 
