@@ -20,11 +20,10 @@
   background-image: url(../images/fighting/fire-04.png);
   max-width: 500px;
   max-height: 600px;
-
   background-size: cover;
   align-self: flex-end;
   justify-self: center;
-  animation: fire 3s ease-in-out alternate infinite;
+  animation: fire 2s alternate infinite;
 }
 
 @keyframes fire {
@@ -54,12 +53,12 @@
   background-size: cover;
   align-self: flex-end;
   justify-self: flex-start;
-  animation: jackWalking 1s 5 alternate forwards ease-in;
+  animation: shaking 0.1s ease-in-out alternate 25 forwards;
 }
 /* jack jumping */
 
 .jackJump {
-  animation: jackJump 3s 3s 5 forwards ease-in;
+  animation: jackJump 0.5s 1s 5 forwards ease-in;
 }
 
 @keyframes jackJump {
@@ -72,19 +71,39 @@
 /* jack Walking */
 
 .jackWalking {
-  animation: jackWalking 5s 3 forwards ease-in;
+  animation: jackWalking 3s ease-in-out alternate 5 forwards;
 }
 
 @keyframes jackWalking {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(300px);
   }
   100% {
-    transform: translateX(40px);
+    transform: translateX(-100px);
   }
 }
 
 /* jack Walking */
+/*  */
+/* jack shaking */
+
+.shaking {
+  animation: shaking 0.1s ease-in-out alternate 30 forwards;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
 /*  */
 
 .wendy {
