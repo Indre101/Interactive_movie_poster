@@ -1,14 +1,58 @@
 .container {
+  overflow: hidden;
   background-image: url("../images/hallway-03-03.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   color: blue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
 }
 
-img {
+.background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-self: center;
+  margin-bottom: -200px;
+}
+
+
+.twins {
+  opacity: 0;
+  align-self: center;
+  grid-area: 1/2/ span 1/ span 1;
+  background-image: url("../images/twins.png");
   width: 300px;
-  height: 200px;
+  height: 400px;
+  animation: appear 1s 2s linear forwards 1;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
+}
+
+.boy {
+  grid-area: 1/2/ span 1/ span 1;
+  background-image: url("../images/boy_test.png");
+  width: 300px;
+  height: 400px;
+  align-self: flex-end;
+  bottom: -25vw;
+  animation: bycycle 3s forwards ease-in 1;
+}
+
+@keyframes bycycle {
+  from {
+    transform: translateY(200px);
+  }
+
+  to {
+    transform: translateY(-200px);
+
+  }
 }
