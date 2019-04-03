@@ -10,13 +10,17 @@
 
 .norepeat {
   background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
 
+/* fire */
 .fire {
   grid-area: 1/1 / span 1 / span 1;
   background-image: url(../images/fighting/fire-04.png);
-  width: 500px;
-  height: 600px;
+  max-width: 500px;
+  max-height: 600px;
+
   background-size: cover;
   align-self: flex-end;
   justify-self: center;
@@ -39,4 +43,57 @@
   100% {
     filter: drop-shadow(10px 10px 15px rgb(232, 104, 6));
   }
+}
+/* fire */
+
+.jack {
+  grid-area: 1/2 / span 1 / span 1;
+  background-image: url(../images/fighting/jack-03.png);
+  max-width: 500px;
+  max-height: 600px;
+  background-size: cover;
+  align-self: flex-end;
+  justify-self: flex-start;
+  animation: jackWalking 1s 5 alternate forwards ease-in;
+}
+/* jack jumping */
+
+.jackJump {
+  animation: jackJump 3s 3s 5 forwards ease-in;
+}
+
+@keyframes jackJump {
+  100% {
+    transform: rotate(5deg);
+    transform-origin: left;
+  }
+}
+
+/* jack Walking */
+
+.jackWalking {
+  animation: jackWalking 5s 3 forwards ease-in;
+}
+
+@keyframes jackWalking {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+/* jack Walking */
+/*  */
+
+.wendy {
+  grid-area: 1/2 / span 1 / span 1;
+  background-image: url(../images/fighting/wendy-06.png);
+  max-width: 400px;
+  max-height: 600px;
+  background-size: contain;
+  align-self: flex-end;
+  justify-self: center;
+  bottom: 0;
 }
