@@ -1,0 +1,14 @@
+.container {
+  background-image: url("../images/hallway-03-03.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: blue;
+
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
