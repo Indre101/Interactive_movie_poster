@@ -30,7 +30,7 @@ const canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 const child = new Image();
-child.src = "./images/wall.png";
+child.src = "./images/door.jpg";
 
 let mother = new Image();
 mother.src = "./images/reddoors.gif";

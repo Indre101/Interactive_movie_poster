@@ -1,27 +1,17 @@
-@font-face {
-  font-family: 'Aflfont';
-  src: url('./fonts/aflfont.TTF');
-
-}
-
 body {
   height: 100vh;
   width: 100vw;
-  /* grid-template-columns: repeat(3, 1fr); */
 
 
 }
 
-div {
-  font-family: "Aflfont";
 
-}
 
 /* Surface */
 
 
 .container {
-  width: 1000px;
+  width: 600px;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -46,14 +36,13 @@ div {
   position: absolute;
   background: linear-gradient(rgb(111, 4, 23) 30%, rgb(94, 2, 8) 50%, rgb(104, 0, 0) 100%);
   /* border-radius: 100% 0 50% 0; */
-  top: 20vw;
   left: 0;
-  bottom: 50px;
+  bottom: 0px;
   width: 600px;
   height: 3em;
   opacity: 0.4;
   z-index: -1;
-  animation: overflowing 6s ease-in infinite;
+  animation: surface 6s ease-in infinite;
 }
 
 /* Animation of water surface */
@@ -140,12 +129,4 @@ div {
   }
 
 
-}
-
-.bloodwave {
-  background-image: url("./images/bloodwave.png");
-  width: 500px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
