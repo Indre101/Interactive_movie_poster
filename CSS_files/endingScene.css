@@ -83,7 +83,6 @@ body {
 }
 
 .car2 {
-  background-image: url("../images/snowmobile-04.png");
   animation: driveBack 7s ease-in-out forwards 1;
 
 }

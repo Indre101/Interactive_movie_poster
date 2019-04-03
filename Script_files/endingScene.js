@@ -3,20 +3,23 @@ const wrapper = document.getElementById("carWrapper");
 
 
 car.addEventListener("animationend", listener, false);
-// car.style.backgroundImage = "";
 
+let i = 0;
 
 function listener(event) {
+  i++
+
   switch (event.type) {
     case "animationend":
-      car.classList.remove("car1");
-      car.classList.add("car2");
-      car.style.backgroundImage = "url('././images/snowmobileturn.png')"
-      if (car.style.backgroundImage === "url('././images/snowmobileturn.png')") {
-        car.classList.remove("car2");
-        car.classList.add("car1");
-        car.style.backgroundImage = ""
+      console.log(i);
 
+      if (i == 2) {
+        clear();
+      } else {
+        i = 1;
+        car.classList.remove("car1");
+        car.classList.add("car2");
+        car.style.backgroundImage = "url('././images/snowmobileturn.png')"
       }
       break;
 
@@ -24,13 +27,9 @@ function listener(event) {
 }
 
 
-function change() {
-  console.log("kk")
-  if (car.style.backgroundImage === "url('././images/snowmobileturn.png')") {
-    car.classList.remove("car2");
-    car.classList.add("car1");
-    car.style.backgroundImage = "url('././images/snowmobileturn.png')"
-
-  }
+function clear() {
+  car.classList.remove("car2");
+  car.classList.add("car1");
+  car.style.backgroundImage = ""
 
 }
