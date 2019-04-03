@@ -58,13 +58,8 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   align-self: center;
-  animation: drive 5s linear infinite alternate;
+  animation: drive 15s ease-in-out alternate-reverse forwards infinite;
 
-
-}
-
-.forward {
-  animation: drive 10s linear 1 ease-in alternate forwards;
 
 }
 
