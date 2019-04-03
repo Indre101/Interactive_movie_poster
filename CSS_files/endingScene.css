@@ -49,14 +49,12 @@ body {
   }
 }
 
-#carWrapper {
-  grid-area: 2/2/ span 3/ span 2;
-  align-self: center;
-
-
-}
+#carWrapper {}
 
 .car {
+  grid-area: 2/2/ span 3/ span 2;
+  align-self: center;
+  margin-bottom: -10vh;
   width: 300px;
   height: 300px;
   background-size: contain;
@@ -67,7 +65,7 @@ body {
 }
 
 .car1 {
-  animation: drive 7s ease-in-out forwards 1;
+  animation: drive 7s linear forwards 1;
 
 }
 
@@ -76,27 +74,93 @@ body {
     transform: translate(-100px, 0);
   }
 
+  10% {
+    transform: translate(-50px, -20px);
+  }
+
+  20% {
+    transform: translate(0px, 10px);
+  }
+
+
+  30% {
+    transform: translate(50px, -30px);
+  }
+
+  40% {
+    transform: translate(100px, 0px);
+  }
+
+  50% {
+    transform: translate(250px, 30px);
+  }
+
+  60% {
+    transform: translate(340px, -10px);
+  }
+
+  70% {
+    transform: translate(450px, 20px);
+  }
+
+  80% {
+    transform: translate(540px, -10);
+  }
+
+
   100% {
-    transform: translate(500px, 0);
+    transform: translate(600px, 0);
 
   }
 }
 
 .car2 {
-  animation: driveBack 7s ease-in-out forwards 1;
+  animation: driveBack 7s linear forwards 1;
 
 }
 
 
 @keyframes driveBack {
   0% {
-    transform: translate(500px, 0);
+    transform: translate(600px, 0);
   }
 
-  50% {
+  10% {
     transform: translate(500px, 100px);
 
   }
+
+
+  20% {
+    transform: translate(600px, 120);
+  }
+
+  30% {
+    transform: translate(400px, 80px);
+
+  }
+
+  40% {
+    transform: translate(300px, 100px);
+
+  }
+
+
+  50% {
+    transform: translate(180px, 130px);
+
+  }
+
+  60% {
+    transform: translate(100px, 100px);
+
+  }
+
+  70% {
+    transform: translate(0px, 120px);
+
+  }
+
 
   80% {
     transform: translate(-100px, 100px);

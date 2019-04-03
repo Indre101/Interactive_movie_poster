@@ -1,5 +1,4 @@
 const car = document.getElementById("car");
-const wrapper = document.getElementById("carWrapper");
 
 
 car.addEventListener("animationend", listener, false);
