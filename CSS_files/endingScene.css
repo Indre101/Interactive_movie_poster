@@ -1,0 +1,31 @@
+.bg {
+  background-image: url("../images/mountain-02.png");
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.snow {
+  background-image: url("../images/snow-05.png");
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  animation: snowing 8s ease-in infinite;
+}
+
+@keyframes snowing {
+  from {
+
+    transform: translateY(-800px);
+
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(100);
+
+  }
+}
