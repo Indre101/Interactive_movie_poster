@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/fighting/livingroom-02.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+.norepeat {
+  background-repeat: no-repeat;
+}
+
+.fire {
+  grid-area: 1/1 / span 1 / span 1;
+  background-image: url(../images/fighting/fire-04.png);
+  width: 500px;
+  height: 600px;
+  background-size: cover;
+  align-self: flex-end;
+  justify-self: center;
+  animation: fire 3s ease-in-out alternate infinite;
+}
+
+@keyframes fire {
+  0% {
+    filter: drop-shadow(10px 10px 5px #ff4500);
+  }
+  30% {
+    filter: drop-shadow(10px 10px 5px orange);
+  }
+  60% {
+    filter: drop-shadow(10px 10px 15px red);
+  }
+  80% {
+    filter: drop-shadow(15px 15px 10px rgb(109, 50, 50));
+  }
+  100% {
+    filter: drop-shadow(10px 10px 15px rgb(232, 104, 6));
+  }
+}
