@@ -64,7 +64,7 @@ body {
 }
 
 .forward {
-  animation: drive 10s linear 1 alternate ease-in-out forwards;
+  animation: drive 10s linear 1 ease-in alternate forwards;
 
 }
 
