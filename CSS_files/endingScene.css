@@ -1,31 +1,95 @@
+body {
+  overflow: hidden;
+
+}
+
 .bg {
   background-image: url("../images/mountain-02.png");
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr)/200px 1fr 200px;
 }
 
 .snow {
-  background-image: url("../images/snow-05.png");
+  position: absolute;
   background-repeat: repeat;
   width: 100vw;
   height: 100vh;
   background-size: contain;
-  animation: snowing 8s ease-in infinite;
+  background-image: url("../images/snow-05.png");
+
+}
+
+.snow1 {
+  animation: snowing 7s ease-in infinite;
+
+}
+
+.snow2 {
+  animation: snowing 18s 3s ease-out infinite;
+
+}
+
+.snow3 {
+  animation: snowing 12s 6s ease-out infinite;
+
 }
 
 @keyframes snowing {
-  from {
-
+  0% {
     transform: translateY(-800px);
 
   }
 
-  to {
+  100% {
     opacity: 0;
-    transform: translateY(100);
+  }
+}
+
+
+.car {
+  grid-area: 2/2/ span 3/ span 2;
+  background-image: url("../images/snowmobile-04.png");
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: center;
+  animation: drive 5s linear infinite alternate;
+
+
+}
+
+.forward {
+  animation: drive 10s linear 1 alternate ease-in-out forwards;
+
+}
+
+@keyframes drive {
+  0% {
+    transform: translate(-100px, 0);
+  }
+
+  30% {
+    transform: translate(500px, 0) scaleX(-1);
+  }
+
+  60% {
+
+    transform: translate(500px, 100px);
+  }
+
+  80% {
+    transform: translate(-100px, 100px) scaleX(-1);
 
   }
+
+  100% {
+    transform: translate(-100px, 0px);
+
+  }
+
 }
