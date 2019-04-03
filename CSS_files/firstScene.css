@@ -1,6 +1,5 @@
 .container {
   overflow: hidden;
-  background-image: url("../images/hallway-03-03.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -8,8 +7,38 @@
   color: blue;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background-color: black;
 
 }
+
+.container1 {
+  background-image: url("../images/hallway-03-03.png");
+}
+
+.fadeout {
+  animation: fadeout 1s linear forwards 1;
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.container2 {
+  opacity: 0;
+  background-image: url("../images/hallwayopendoor.png");
+  animation: bganimation 2s ease-in forwards 1;
+
+}
+
+@keyframes bganimation {
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .background {
   background-position: center;
@@ -66,6 +95,7 @@
   width: 200px;
   height: 150px;
   margin-right: -50px;
+  cursor: pointer;
   animation: appearKey 2s 4s forwards ease-in infinite;
 
 }
