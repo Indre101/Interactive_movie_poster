@@ -1,15 +1,13 @@
 const jack = document.getElementById("jack");
 const wendy = document.getElementById("wendy");
-// const audio1 = document.getElementById("sound");
+const bat = document.getElementById("bat");
+const container = document.getElementById("container");
+const hitting = document.getElementById("hitting");
+// audio control
+let audio1 = new Audio('././audio/bash_your_brains_in.mp3');
+audio1.play();
 
-// audio1.play();
-
-
-
-
-
-
-
+///audio controll
 
 
 
@@ -62,4 +60,26 @@ function wendyListener(event) {
       break;
 
   }
+}
+// bat functionality here
+///////////////
+
+bat.onclick = function () {
+  changeBg()
+  setTimeout(() => {
+    hitting.style.display = "block";
+    container.style.display = "none";
+    let audio = new Audio('././audio/give_me_the_bat_wendy_ahhh_god_damm_it_bang.mp3');
+    audio.play();
+    audio1.pause();
+
+
+
+  }, 4800);
+}
+
+function changeBg() {
+
+  container.classList.add("zoomin");
+
 }
