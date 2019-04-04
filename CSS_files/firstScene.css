@@ -16,6 +16,9 @@
 
 }
 
+
+
+
 .instructions {
   grid-area: 1/2/span 1/ span 1;
   display: flex;
@@ -124,10 +127,10 @@ h4 {
 }
 
 .boy {
-  background-image: url("../images/boy_test.png");
+  align-self: flex-end;
+
   width: 300px;
   height: 400px;
-  align-self: flex-end;
   bottom: -25vw;
   animation: bycycle 3s forwards ease-in 1;
 }
@@ -142,6 +145,28 @@ h4 {
 
   }
 }
+
+.boy1 {
+
+  background-image: url("../images/boy_test.png");
+
+}
+
+.boy2 {
+  margin-bottom: 5vh;
+  background-image: url("../images/boySide.png");
+  animation: moveRight 2s linear forwards 1;
+
+}
+
+@keyframes moveRight {
+  100% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+}
+
 
 .key {
   opacity: 0;
