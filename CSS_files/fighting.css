@@ -458,25 +458,41 @@ iframe {
 /* elevator  */
 /* elevator  */
 
-#elevator {
+.todisplaynone {
   display: none;
+
+}
+
+.elevatorContainer {
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  animation: appearElevator 1s linear 1 forwards;
+
+}
+
+@keyframes appearElevator {
+  100% {
+    opacity: 1;
+  }
 }
 
 .elevator {
-  opacity: 0;
-  display: flex;
-  justify-content: center;
   background-image: url("../images/elevator.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  z-index: 1000;
+
 }
 
+
 .bloodOcean {
+  position: absolute;
   align-self: flex-end;
   background: linear-gradient(rgb(111, 4, 23) 30%, rgb(94, 2, 8) 50%, rgb(104, 0, 0) 100%);
-  width: 80vw;
+  width: 70vw;
   height: 3em;
   opacity: 0.4;
   z-index: -1;
@@ -493,7 +509,6 @@ iframe {
   }
 
   30% {
-    opacity: 1;
     border-radius: 15% 95% 0 0;
     opacity: 0.4;
     height: 150px;

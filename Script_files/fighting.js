@@ -7,13 +7,9 @@ const blood = document.querySelectorAll(".blood");
 // audio control
 let audio1 = new Audio('././audio/bash_your_brains_in.mp3');
 
-
-
 window.onload = (event) => {
   audio1.play();
-
 };
-
 
 ///audio controll
 
@@ -31,7 +27,6 @@ function jackMove() {
   }, 4000);
 
   setTimeout(() => {
-    console.log(i);
     jack.classList.remove("jackWalking");
     jack.classList.remove("jackJump");
     jack.classList.add("shaking");
@@ -89,9 +84,9 @@ bat.onclick = function () {
     }, 5000);
 
     container.style.display = "none";
+    audio1.pause();
     const audio2 = new Audio('././audio/give_me_the_bat_wendy_ahhh_god_damm_it_bang.mp3');
     audio2.play();
-    audio1.pause();
 
   }, 4800);
 }
@@ -105,7 +100,7 @@ function changeBg() {
 // blood elevator appear
 
 const blood3 = document.getElementById("blood3"); // finishes animation
-const elevator = document.getElementById("elevator"); //elevator appears
+const elevator = document.getElementById("todisplaynone"); //elevator appears
 
 blood3.addEventListener("animationend", bloodAppear, false);
 
@@ -114,8 +109,14 @@ function bloodAppear(event) {
     case "animationend":
 
       setTimeout(() => {
+        audio2.pause();
+        const audio3 = new Audio('././audio/very_creepy_sound_1.mp3');
+        audio3.play();
         hitting.style.display = "none";
         elevator.style.display = "block";
+
+
+
 
       }, 3000);
 
