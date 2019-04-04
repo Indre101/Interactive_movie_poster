@@ -23,28 +23,28 @@
   background-size: cover;
   align-self: flex-end;
   justify-self: center;
-  animation: fire 2s alternate infinite;
+  animation: fire 2s alternate linear infinite;
 }
 
 @keyframes fire {
   0% {
-    filter: drop-shadow(10px 10px 5px #ff4500);
+    filter: drop-shadow(10px 10px 35px #ff4500);
   }
 
   30% {
-    filter: drop-shadow(10px 10px 5px orange);
+    filter: drop-shadow(10px 10px 30px orange);
   }
 
   60% {
-    filter: drop-shadow(10px 10px 15px red);
+    filter: drop-shadow(10px 10px 35px red);
   }
 
   80% {
-    filter: drop-shadow(15px 15px 10px rgb(109, 50, 50));
+    filter: drop-shadow(15px 15px 30px rgb(109, 50, 50));
   }
 
   100% {
-    filter: drop-shadow(10px 10px 15px rgb(232, 104, 6));
+    filter: drop-shadow(10px 10px 35px rgb(232, 104, 6));
   }
 }
 
