@@ -296,13 +296,12 @@
 
 .bat {
   cursor: pointer;
-  opacity: 1;
+  opacity: 0;
   grid-area: 1/2/ span 1/ span 1;
   align-self: flex-end;
   justify-self: flex-end;
   width: 400px;
   height: 400px;
-  /* transition: all; */
   background-image: url(../images/fighting/bat.png);
   background-size: contain;
   animation: bat 3s 20s ease-in 1 forwards;
