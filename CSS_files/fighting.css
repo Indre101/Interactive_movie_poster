@@ -30,19 +30,24 @@
   0% {
     filter: drop-shadow(10px 10px 5px #ff4500);
   }
+
   30% {
     filter: drop-shadow(10px 10px 5px orange);
   }
+
   60% {
     filter: drop-shadow(10px 10px 15px red);
   }
+
   80% {
     filter: drop-shadow(15px 15px 10px rgb(109, 50, 50));
   }
+
   100% {
     filter: drop-shadow(10px 10px 15px rgb(232, 104, 6));
   }
 }
+
 /* fire */
 
 .jack {
@@ -54,10 +59,11 @@
   align-self: flex-end;
   justify-self: flex-start;
 }
+
 /* jack jumping */
 
 .jackJump {
-  animation: jackJump 0.5s 1s 5 forwards ease-in;
+  animation: jackJump 0.5s 1s 8 forwards ease-in;
 }
 
 @keyframes jackJump {
@@ -70,16 +76,18 @@
 /* jack Walking */
 
 .jackWalking {
-  animation: jackWalking 3s ease-in-out alternate 5 forwards;
+  animation: jackWalking 3s ease-in-out alternate 9 forwards;
 }
 
 @keyframes jackWalking {
   0% {
     transform: translateX(0px);
   }
+
   50% {
     transform: translateX(300px);
   }
+
   100% {
     transform: translateX(-100px);
   }
@@ -90,7 +98,7 @@
 /* jack shaking */
 
 .shaking {
-  animation: shaking 0.1s ease-in-out alternate 25 forwards;
+  animation: shaking 0.1s ease-in-out alternate 35 forwards;
 }
 
 @keyframes shaking {
@@ -114,4 +122,200 @@
   align-self: flex-end;
   justify-self: center;
   bottom: 0;
+
+
+  /* animation: running1 2s linear 6; */
+
+
+}
+
+
+
+
+/* running animations */
+.running1 {
+  animation: running1 2s linear alternate-reverse 8;
+}
+
+@keyframes running1 {
+  0% {
+    transform: translateX(-300px);
+  }
+
+  50% {
+    transform: translateX(300px);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.running2 {
+  animation: running2 4s linear alternate-reverse 6;
+}
+
+@keyframes running2 {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  50% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+/* wendy animations */
+
+.crying1 {
+  animation: crying1 0.2s alternate 32;
+}
+
+.crying2 {
+  animation: crying2 0.2s alternate 32;
+}
+
+@keyframes crying2 {
+  0% {
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+  }
+
+  2% {
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+  }
+
+  4% {
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+  }
+
+  6% {
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+  }
+
+  8% {
+    transform: rotate(-22deg);
+    -webkit-transform: rotate(-22deg);
+  }
+
+  10% {
+    transform: rotate(22deg);
+    -webkit-transform: rotate(22deg);
+  }
+
+  12% {
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+  }
+
+  14% {
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+  }
+
+  16% {
+    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+  }
+
+  18% {
+    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes crying1 {
+  0% {
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+  }
+
+  2% {
+    transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+  }
+
+  4% {
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+  }
+
+  6% {
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+  }
+
+  8% {
+    transform: rotate(-22deg);
+    -webkit-transform: rotate(-22deg);
+  }
+
+  10% {
+    transform: rotate(22deg);
+    -webkit-transform: rotate(22deg);
+  }
+
+  12% {
+    transform: rotate(-18deg);
+    -webkit-transform: rotate(-18deg);
+  }
+
+  14% {
+    transform: rotate(18deg);
+    -webkit-transform: rotate(18deg);
+  }
+
+  16% {
+    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+  }
+
+  18% {
+    transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+  }
+
+  20% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+
+.bat {
+  opacity: 0;
+  grid-area: 1/2/ span 1/ span 1;
+  align-self: center;
+  justify-self: flex-end;
+  width: 400px;
+  height: 400px;
+  /* transition: all; */
+  background-image: url(../images/fighting/bat.png);
+  background-size: contain;
+  animation: bat 3s 7s ease-in 1 forwards;
+
+}
+
+@keyframes bat {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    filter: drop-shadow(8px 8px 9px red);
+
+    opacity: 1;
+  }
 }

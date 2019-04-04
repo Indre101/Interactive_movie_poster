@@ -29,6 +29,6 @@ function listener(event) {
 function clear() {
   car.classList.remove("car2");
   car.classList.add("car1");
-  car.style.backgroundImage = ""
+  car.style.backgroundImage = "";
 
 }
