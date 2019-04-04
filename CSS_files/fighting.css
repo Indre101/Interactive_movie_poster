@@ -8,6 +8,17 @@
   overflow: hidden;
 }
 
+.bodyDissapear {
+  opacity: 0;
+  animation: bodyDissapear 2s linear 0.3s 1 forwards;
+}
+
+@keyframes bodyDissapear {
+  100% {
+    opacity: 1;
+  }
+}
+
 .norepeat {
   background-repeat: no-repeat;
   width: 100vw;

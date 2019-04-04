@@ -5,6 +5,11 @@ const container = document.getElementById("container");
 const hitting = document.getElementById("hitting");
 const blood = document.querySelectorAll(".blood");
 let audio1 = document.querySelector("#audio1");
+const body = document.querySelector("body");
+
+window.addEventListener("load", body.classList.add("bodyDissapear"));
+
+
 
 let i = 0;
 
@@ -58,7 +63,7 @@ const audio2 = new Audio(
   "././audio/give_me_the_bat_wendy_ahhh_god_damm_it_bang.mp3"
 );
 
-bat.onclick = function() {
+bat.onclick = function () {
   // audio1.pause();
 
   changeBg();
@@ -67,7 +72,7 @@ bat.onclick = function() {
     hitting.style.display = "block";
     setTimeout(() => {
       hitting.style.backgroundImage = "url('././images/wendyjack-03.png')";
-      blood.forEach(function(e) {
+      blood.forEach(function (e) {
         e.style.display = "block";
       });
     }, 5000);

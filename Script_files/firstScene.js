@@ -51,6 +51,7 @@ function chaningWindow(event) {
     case "animationend":
       console.log(i);
       if (i == 2) {
+        bg.classList.add("fadeout");
         window.location.href = "./fighting.html";
 
       }
