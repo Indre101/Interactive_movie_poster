@@ -53,7 +53,6 @@
   background-size: cover;
   align-self: flex-end;
   justify-self: flex-start;
-  animation: shaking 0.1s ease-in-out alternate 25 forwards;
 }
 /* jack jumping */
 
@@ -91,7 +90,7 @@
 /* jack shaking */
 
 .shaking {
-  animation: shaking 0.1s ease-in-out alternate 30 forwards;
+  animation: shaking 0.1s ease-in-out alternate 25 forwards;
 }
 
 @keyframes shaking {
