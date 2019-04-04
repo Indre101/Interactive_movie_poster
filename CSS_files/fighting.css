@@ -359,6 +359,8 @@ iframe {
  /* */
 
 .hitting {
+  display: flex;
+  justify-content: center;
   display: none;
   width: 100vw;
   height: 100vh;
@@ -368,6 +370,7 @@ iframe {
 
 }
 
+
 @keyframes appearFight {
   0% {
     opacity: 0;
@@ -376,6 +379,71 @@ iframe {
   100% {
     opacity: 1;
 
+  }
+
+}
+
+/* bloooooooood */
+
+.blood {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  background-image: url(../images/blood-05.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-self: flex-start;
+  left: 35vw;
+
+
+}
+
+
+.blood1 {
+  width: 400px;
+  height: 500px;
+  animation: blood1 0.5s 0.4s ease-in forwards 4;
+}
+
+
+
+
+@keyframes blood1 {
+  100% {
+    opacity: 1;
+    transform: translate(50px, -50px)
+  }
+
+}
+
+
+.blood2 {
+  width: 300px;
+  height: 500px;
+  animation: blood2 0.4s 0.7s ease-in forwards 5;
+}
+
+@keyframes blood2 {
+  100% {
+    opacity: 1;
+
+    transform: rotate(80deg) translate(30px, 80px)
+  }
+
+}
+
+.blood3 {
+  width: 200px;
+  height: 300px;
+  animation: blood3 0.4s 0.9s linear forwards 6;
+}
+
+@keyframes blood3 {
+  100% {
+
+    opacity: 1;
+
+    transform: rotate(50deg) translate(80px, 80px)
   }
 
 }

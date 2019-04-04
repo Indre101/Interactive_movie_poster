@@ -3,6 +3,7 @@ const wendy = document.getElementById("wendy");
 const bat = document.getElementById("bat");
 const container = document.getElementById("container");
 const hitting = document.getElementById("hitting");
+const blood = document.querySelectorAll(".blood");
 // audio control
 let audio1 = new Audio('././audio/bash_your_brains_in.mp3');
 audio1.play();
@@ -70,6 +71,10 @@ bat.onclick = function () {
     hitting.style.display = "block";
     setTimeout(() => {
       hitting.style.backgroundImage = "url('././images/wendyjack-03.png')";
+      blood.forEach(function (e) {
+        e.style.display = "block";
+
+      })
 
     }, 5000);
     container.style.display = "none";
