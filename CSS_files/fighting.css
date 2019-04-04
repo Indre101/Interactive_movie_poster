@@ -364,8 +364,12 @@ iframe {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  animation: appearFight 4.6s linear 2 forwards;
   background-image: url(../images/wendyjack1-04.png);
+
+}
+
+.hittinAnimation1 {
+  animation: appearFight 4.6s linear 2 forwards;
 
 }
 
@@ -434,7 +438,7 @@ iframe {
 .blood3 {
   width: 200px;
   height: 300px;
-  animation: blood3 0.4s 0.9s linear forwards 9;
+  animation: blood3 0.4s 0.9s linear forwards 13;
 }
 
 @keyframes blood3 {
@@ -454,9 +458,12 @@ iframe {
 /* elevator  */
 /* elevator  */
 
+#elevator {
+  display: none;
+}
 
-
-.door {
+.elevator {
+  opacity: 0;
   display: flex;
   justify-content: center;
   background-image: url("../images/elevator.png");
@@ -466,10 +473,9 @@ iframe {
   height: 100vh;
 }
 
-.drop {
+.bloodOcean {
   align-self: flex-end;
   background: linear-gradient(rgb(111, 4, 23) 30%, rgb(94, 2, 8) 50%, rgb(104, 0, 0) 100%);
-
   width: 80vw;
   height: 3em;
   opacity: 0.4;
@@ -487,6 +493,7 @@ iframe {
   }
 
   30% {
+    opacity: 1;
     border-radius: 15% 95% 0 0;
     opacity: 0.4;
     height: 150px;
