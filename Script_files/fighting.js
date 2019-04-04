@@ -100,6 +100,8 @@ function bloodAppear(event) {
         audio2.pause();
         const audio3 = new Audio("././audio/very_creepy_sound_1.mp3");
         audio3.play();
+        hitting.classList.remove("hittinAnimation1");
+        hitting.classList.add("dissapear");
         hitting.style.display = "none";
         elevator.style.display = "block";
       }, 2000);

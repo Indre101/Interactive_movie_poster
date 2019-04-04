@@ -386,6 +386,17 @@ iframe {
 
 }
 
+
+.dissapear {
+  animation: dissapear 1s linear forwards 1;
+}
+
+@keyframes dissapear {
+  100% {
+    opacity: 0;
+  }
+}
+
 /* bloooooooood */
 
 .blood {
@@ -499,7 +510,7 @@ iframe {
   height: 3em;
   opacity: 0.4;
   z-index: -1;
-  animation: surface 6s ease-in forwards 1;
+  animation: surface 8s ease-in forwards 1;
 }
 
 /* Animation of water surface */
