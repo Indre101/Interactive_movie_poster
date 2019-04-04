@@ -34,9 +34,26 @@ key.onclick = function () {
   setInterval(() => {
     bg.classList.remove("container1");
     boy.classList.add("boy2");
-
     bg.classList.add("container2");
 
   }, 1200);
 
+}
+
+boy.addEventListener("animationend", chaningWindow, false);
+
+let i = 0;
+
+function chaningWindow(event) {
+  i++;
+
+  switch (event.type) {
+    case "animationend":
+      console.log(i);
+      if (i == 2) {
+        window.location.href = "./fighting.html";
+
+      }
+      break;
+  }
 }
