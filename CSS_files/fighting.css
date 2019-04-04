@@ -295,9 +295,10 @@
 
 
 .bat {
+  cursor: pointer;
   opacity: 0;
   grid-area: 1/2/ span 1/ span 1;
-  align-self: center;
+  align-self: flex-end;
   justify-self: flex-end;
   width: 400px;
   height: 400px;
