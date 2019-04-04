@@ -401,7 +401,7 @@ iframe {
 .blood1 {
   width: 400px;
   height: 500px;
-  animation: blood1 0.5s 0.4s ease-in forwards 4;
+  animation: blood1 0.5s 0.4s ease-in forwards 6;
 }
 
 
@@ -419,7 +419,7 @@ iframe {
 .blood2 {
   width: 300px;
   height: 500px;
-  animation: blood2 0.4s 0.7s ease-in forwards 5;
+  animation: blood2 0.4s 0.7s ease-in forwards 8;
 }
 
 @keyframes blood2 {
@@ -434,7 +434,7 @@ iframe {
 .blood3 {
   width: 200px;
   height: 300px;
-  animation: blood3 0.4s 0.9s linear forwards 6;
+  animation: blood3 0.4s 0.9s linear forwards 9;
 }
 
 @keyframes blood3 {
