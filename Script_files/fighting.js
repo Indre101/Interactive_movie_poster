@@ -1,8 +1,17 @@
 const jack = document.getElementById("jack");
 const wendy = document.getElementById("wendy");
-// const sound = document.getElementById("sound");
+// const audio1 = document.getElementById("sound");
 
-// sound.play();
+// audio1.play();
+
+
+
+
+
+
+
+
+
 
 let i = 0;
 
