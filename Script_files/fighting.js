@@ -68,6 +68,10 @@ bat.onclick = function () {
   changeBg()
   setTimeout(() => {
     hitting.style.display = "block";
+    setTimeout(() => {
+      hitting.style.backgroundImage = "url('././images/wendyjack-03.png')";
+
+    }, 5000);
     container.style.display = "none";
     let audio = new Audio('././audio/give_me_the_bat_wendy_ahhh_god_damm_it_bang.mp3');
     audio.play();

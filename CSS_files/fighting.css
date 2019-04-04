@@ -360,11 +360,12 @@ iframe {
 
 .hitting {
   display: none;
-  background-image: url(../images/wendyjack1-04.png);
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  animation: appearFight 3s linear 1 forwards;
+  animation: appearFight 4.6s linear 2 forwards;
+  background-image: url(../images/wendyjack1-04.png);
+
 }
 
 @keyframes appearFight {
@@ -374,5 +375,7 @@ iframe {
 
   100% {
     opacity: 1;
+
   }
+
 }
