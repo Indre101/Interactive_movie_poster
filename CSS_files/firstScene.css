@@ -26,8 +26,7 @@
   width: 700px;
   height: 700px;
   align-self: center;
-  font-size: 2em;
-  animation: showButton 1s 2s linear forwards;
+  animation: showButton 0.2s 0.1s linear forwards;
   opacity: 0;
 
 
@@ -46,7 +45,7 @@
   height: 300px;
   transition: all;
   justify-content: center;
-  animation: showButton 1s 4s linear forwards;
+  animation: showButton 1s 26s linear forwards;
   cursor: pointer;
 }
 
@@ -205,5 +204,75 @@ h4 {
     opacity: 1;
 
     filter: drop-shadow(15px 15px 15px red)
+  }
+}
+
+/* typewritter */
+
+h3 {
+  margin: 1em;
+}
+
+.line-1 {
+  top: 50%;
+  width: 3em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  font-size: 2em;
+  /* text-align: center; */
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s 2s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+.anim-typewriter1 {
+  animation: typewriter 4s 6s steps(64) 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+.anim-typewriter2 {
+  animation: typewriter 4s 10s steps(64) 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+.anim-typewriter3 {
+  animation: typewriter 4s 14s steps(64) 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+.anim-typewriter4 {
+  animation: typewriter 4s 18s steps(64) 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+.anim-typewriter5 {
+  animation: typewriter 4s 22s steps(64) 1 normal both,
+    blinkTextCursor 500ms steps(200) infinite normal;
+}
+
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 26em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
   }
 }

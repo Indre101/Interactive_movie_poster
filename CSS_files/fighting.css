@@ -641,20 +641,42 @@ iframe {
 }
 
 /* talling to tony */
-.talkingtotony {
-  display: none;
-  position: absolute;
-  opacity: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-image: url("../images/boy-04.png");
-  animation: elDissapear1 1s 1s linear forwards 1;
 
+
+.up {
+  display: flex;
+  background-image: url(../images/boy-03.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  position: absolute;
+  justify-self: center;
+  animation: axing 1s 2s linear infinite;
+  height: 100%;
+  width: 100%;
 }
 
-@keyframes elDissapear1 {
-  100% {
+.down {
+  display: flex;
+  background-image: url(../images/boy-04.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  position: absolute;
+  justify-self: center;
+  height: 100%;
+  z-index: -1;
+  width: 100%;
+}
+
+@keyframes axing {
+  0% {
     opacity: 1;
   }
+
+  100% {
+    opacity: 0;
+  }
 }
+
+*/
