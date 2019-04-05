@@ -1,65 +1,13 @@
-.container {
-  display: grid;
-  /* grid-template-columns: 30%, 70%; */
-  grid-gap: 1em;
-  overflow: auto;
-  font-family: Arial, sans-serif;
-}
-
-/* menu button css */
-.dropDown {}
-
-@keyframes pulse {
-  0% {
-    -moz-box-shadow: 5px 5px 8px 7px #ccc;
-    -webkit-box-shadow: 5px 5px 8px 7px #ccc;
-    box-shadow: 5px 5px 8px 7px #ccc;
-  }
-
-  20% {
-    -moz-box-shadow: 1px 1px 3px 3px #ccc;
-    -webkit-box-shadow: 1px 1px 3px 3px #ccc;
-    box-shadow: 1px 1px 3px 3px #ccc;
-  }
-
-  50% {
-    -moz-box-shadow: 0px 0px 1px 1px #ccc;
-    -webkit-box-shadow: 0px 0px 1px 1px #ccc;
-    box-shadow: 0px 0px 1px 1px #ccc;
-  }
-
-  100% {
-    -moz-box-shadow: inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
-  }
-}
-
-#menu {
-  font-size: 2rem;
-  margin-bottom: 0;
-  height: 4rem;
-  width: 10rem;
-  background-color: #0493c3;
-  cursor: pointer;
-  animation-name: pulse;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
-
-#menu:hover {
-  -webkit-animation-play-state: paused;
+@font-face {
+  font-family: 'Afl-font';
+  src: url('../fonts/aflfont.TTF');
 }
 
 
-
-/* button css end  */
-
-
-
-
-
-.findSpiderman {
+.findMother {
+  height: 100vh;
+  background-color: bisque;
+  font-family: 'Afl-font', sans-serif;
   text-align: center;
   grid-column-start: 2;
   grid-row-start: 2;
@@ -83,6 +31,7 @@
 }
 
 .rules li {
+  list-style: none;
   padding: 1rem;
   margin-left: 2rem;
 }
@@ -97,9 +46,8 @@
 #firstDoor,
 #secondDoor,
 #thirdDoor {
-  /* background-image: url('door.jpg'); */
   background-size: contain;
-  width: 130px;
+  width: 200px;
   height: 300px;
   padding: 2rem;
 }
@@ -118,36 +66,5 @@
   animation-iteration-count: infinite;
 }
 
-/* points */
-
-#points,
-#record {
-  border: 2px solid black;
-  width: 4rem;
-  height: 3rem;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* record */
-
-.recordLayout {
-  display: flex;
-
-  margin-top: 2rem;
-  align-items: center;
-  color: violet;
-}
-
-#record {
-  margin-left: 1rem;
-}
 
 /* footer part */
-
-footer {
-  grid-column-start: 2;
-  /* margin-bottom: 4rem; */
-}

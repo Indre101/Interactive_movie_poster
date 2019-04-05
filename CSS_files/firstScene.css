@@ -154,7 +154,7 @@ h4 {
 .boy2 {
   margin-bottom: 5vh;
   background-image: url("../images/boySide.png");
-  animation: moveRight 2s linear forwards 1;
+  animation: moveRight 2s 3s linear forwards 1;
 
 }
 

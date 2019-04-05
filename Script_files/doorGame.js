@@ -1,6 +1,6 @@
-let spiderman = "./images/the_mother.jpg";
-let building = "./images/thefather.png";
-let building1 = "./images/twins.jpg";
+let mother = "./images/fighting/wendy-06.png";
+let evil1 = "./images/fighting/jack-03.png"
+let evil2 = "./images/twins.png";
 
 let door1;
 let door2;
@@ -12,13 +12,13 @@ let numOfClosedDoors = 3;
 let firstDoor = document.getElementById("firstDoor");
 let secondDoor = document.getElementById("secondDoor");
 let thirdDoor = document.getElementById("thirdDoor");
-let startButton = document.getElementById("start");
+let startButton = document.getElementById("startDoor");
 let currentPlay = true;
 
 //  start button geting clicked
 
 const notStarted = () => {
-  if (currentPlay === false || startButton.innerHTML === "Start!") {
+  if (currentPlay === false || startButton.textContent === "Start!") {
     return true;
   } else {
     return false;
@@ -31,13 +31,13 @@ function noDoubleClicking(event) {
 
 const startClicked = () => {
   startButton.style.webkitAnimationPlayState = "paused";
-  startButton.innerHTML = "Good Luck!";
+  startButton.textContent = "Good Luck!";
 };
 
 // door functionality
 const isItOpen = door => (door.src === closed) ? true : false;
 
-const isTheDoorWrong = door => (door.getAttribute("src") === spiderman) ? true : false;
+const isTheDoorWrong = door => (door.getAttribute("src") === mother) ? true : false;
 
 
 /// checking if all doors are isItOpen
@@ -58,18 +58,18 @@ function radomPhotoToDoors(maxNumberToEnter) {
 
   switch (numberOfThePhoto) {
     case 0:
-      return building;
+      return evil1;
 
       break;
     case 1:
-      return building1;
+      return evil2;
       break;
     case 2:
-      return building1;
+      return evil2;
       break;
 
     default:
-      return spiderman;
+      return mother;
       break;
   }
 }
@@ -80,21 +80,21 @@ function openDoors() {
   let randomScenario = Math.floor(Math.random() * 3);
 
   if (randomScenario === 0) {
-    door1 = spiderman;
+    door1 = mother;
     //door1 = radomPhotoToDoors(3);
     door2 = radomPhotoToDoors(3);
     door3 = radomPhotoToDoors(3);
   } else if (randomScenario === 1) {
     door1 = radomPhotoToDoors(3);
 
-    door2 = spiderman;
+    door2 = mother;
     //door2 = radomPhotoToDoors(3);
     door3 = radomPhotoToDoors(3);
   } else {
     door1 = radomPhotoToDoors(3);
     door2 = radomPhotoToDoors(3);
     //door3 = radomPhotoToDoors(3);
-    door3 = spiderman;
+    door3 = mother;
   }
 }
 
@@ -134,12 +134,10 @@ thirdDoor.onclick = function () {
 
 const gameOver = status => {
   if (status === "win") {
-    startButton.innerHTML = "You win! Play again?";
-    displayPoints();
+    startButton.textContent = "You win! Play again?";
 
   } else {
-    startButton.innerHTML = "Game over! play again?";
-    pointsOf.innerHTML = 0;
+    startButton.textContent = "Game over! play again?";
     pointsArray = [];
   }
   currentPlay = false;
@@ -192,7 +190,6 @@ const displayPoints = () => {
   pointsArray.push(point);
 
   let newPoints = pointsArray.reduce(getSum);
-  pointsOf.innerHTML = newPoints;
   pointsRecord.push(newPoints);
 
 
@@ -203,7 +200,6 @@ const displayPoints = () => {
     return Math.max(minValue, MaxValue);
   });
 
-  recordOfPoints.innerHTML = maxPointValue;
   // return newPoints;
 
 

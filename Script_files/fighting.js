@@ -110,6 +110,8 @@ function bloodAppear(event) {
         hitting.classList.add("dissapear");
         hitting.style.display = "none";
         elevator.style.display = "block";
+        body.classList.remove("bodyDissapear");
+
       }, 2000);
 
       break;
@@ -131,6 +133,8 @@ function elevatorDissapear(event) {
       elevator.classList.add("elevatorDissapear");
       elevator.style.display = "none";
       danny.style.display = "block";
+      findMother.style.display = "block";
+
       audio4.play();
       audio3.pause();
       break;
@@ -138,3 +142,19 @@ function elevatorDissapear(event) {
 }
 
 // tonny talkingtotony
+const findMother = document.getElementById("findMother")
+const up = document.getElementById("up");
+
+up.addEventListener("animationend", doorGame, false);
+
+function doorGame(event) {
+  switch (event.type) {
+    case "animationend":
+      body.classList.add("moveDown");
+
+
+      audio4.pause();
+      audio3.play();
+      break;
+  }
+}
