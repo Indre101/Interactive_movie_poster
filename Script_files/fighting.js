@@ -6,6 +6,9 @@ const hitting = document.getElementById("hitting");
 const blood = document.querySelectorAll(".blood");
 let audio1 = document.querySelector("#audio1");
 const body = document.querySelector("body");
+const audio3 = new Audio("././audio/very_creepy_sound_1.mp3");
+const audio4 = new Audio("././audio/tony_im_scared.mp3");
+
 
 window.addEventListener("load", body.classList.add("bodyDissapear"));
 
@@ -101,9 +104,7 @@ function bloodAppear(event) {
   switch (event.type) {
     case "animationend":
       setTimeout(() => {
-        console.log("jk");
         audio2.pause();
-        const audio3 = new Audio("././audio/very_creepy_sound_1.mp3");
         audio3.play();
         hitting.classList.remove("hittinAnimation1");
         hitting.classList.add("dissapear");
@@ -121,24 +122,19 @@ function bloodAppear(event) {
 const bloodOcean = document.getElementById("bloodOcean");
 
 bloodOcean.addEventListener("animationend", elevatorDissapear, false);
+const danny = document.getElementById("talkingtotony");
+
 
 function elevatorDissapear(event) {
   switch (event.type) {
     case "animationend":
       elevator.classList.add("elevatorDissapear");
+      elevator.style.display = "none";
+      danny.style.display = "block";
+      audio4.play();
+      audio3.pause();
       break;
   }
 }
 
 // tonny talkingtotony
-const danny = document.getElementById("talkingtotony");
-
-elevator.addEventListener("animationend", tonnyTalking, false);
-
-function tonyTalking(event) {
-  switch (event.type) {
-    case "animationend":
-      elevator.classList.add("elevatorDissapear");
-      break;
-  }
-}

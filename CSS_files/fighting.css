@@ -642,17 +642,19 @@ iframe {
 
 /* talling to tony */
 .talkingtotony {
+  display: none;
+  position: absolute;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
   background-size: cover;
-
-}
-
-.firstTonyImage {
   background-image: url("../images/boy-04.png");
+  animation: elDissapear1 1s 1s linear forwards 1;
+
 }
 
-.secondTonyImage {
-  background-image: url("../images/boy-03.png");
-
+@keyframes elDissapear1 {
+  100% {
+    opacity: 1;
+  }
 }
