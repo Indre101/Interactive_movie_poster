@@ -157,19 +157,18 @@ function elevatorDissapear(event) {
 }
 
 // // tonny talkingtotony
-// const findMother = document.getElementById("findMother")
-// const up = document.getElementById("up");
+const findMother = document.getElementById("findMother")
+const up = document.getElementById("up");
 
-// up.addEventListener("animationend", doorGame, false);
+up.addEventListener("animationend", doorGame, false);
 
-// function doorGame(event) {
-//   switch (event.type) {
-//     case "animationend":
-//       body.classList.add("moveDown");
-
-
-//       audio4.pause();
-//       audio3.play();
-//       break;
-//   }
-// }
+function doorGame(event) {
+  switch (event.type) {
+    case "animationend":
+      body.classList.add("moveDown");
+      findMother.style.display = "block";
+      audio4.pause();
+      audio3.play();
+      break;
+  }
+}

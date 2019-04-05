@@ -637,7 +637,7 @@ body {
 }
 
 .elevatorDissapear {
-  animation: elDissapear 1s 1s linear forwards 1;
+  animation: elDissapear 1s 2s linear forwards 1;
 }
 
 @keyframes elDissapear {
@@ -650,33 +650,32 @@ body {
 
 .talkingtotony {
   display: none;
-
+  height: 100vh;
+  width: 100vw;
 }
 
 .up {
-  display: flex;
   background-image: url(../images/boy-03.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: absolute;
   justify-self: center;
-  animation: talkingtony 1s linear 20;
-  height: 100%;
-  width: 100%;
+  animation: talkingtony 1s linear 23;
+  height: 100vh;
+  width: 100vw;
+
 }
 
 .down {
-  display: flex;
   opacity: 0;
   background-image: url(../images/boy-04.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: absolute;
-  justify-self: center;
-  height: 100%;
   z-index: -1;
+  height: 100vh;
+  width: 100vw;
   animation: talkingtony1 1s linear 1 forwards;
-  width: 100%;
 }
 
 @keyframes talkingtony1 {
