@@ -75,6 +75,7 @@ bat.onclick = function () {
     hitting.style.display = "block";
     setTimeout(() => {
       hitting.style.backgroundImage = "url('././images/wendyjack-03.png')";
+      document.querySelector(".hittinAnimation1").style.display = "block";
       blood.forEach(function (e) {
         e.style.display = "block";
       });
@@ -93,7 +94,13 @@ function changeBg() {
   container.classList.add("zoomin");
 }
 
+
+
+
+
 // blood elevator appear
+
+/////pradek nuo cia
 
 const blood3 = document.getElementById("blood3"); // finishes animation
 const elevator = document.getElementById("todisplaynone"); //elevator appears
@@ -108,7 +115,10 @@ function bloodAppear(event) {
         audio3.play();
         hitting.classList.remove("hittinAnimation1");
         hitting.classList.add("dissapear");
-        hitting.style.display = "none";
+        setTimeout(() => {
+          hitting.style.display = "none";
+
+        }, 2000);
         elevator.style.display = "block";
         body.classList.remove("bodyDissapear");
 
@@ -120,7 +130,7 @@ function bloodAppear(event) {
 
 
 
-// blood elevator dissapears
+// // blood elevator dissapears
 const bloodOcean = document.getElementById("bloodOcean");
 
 bloodOcean.addEventListener("animationend", elevatorDissapear, false);
@@ -131,9 +141,12 @@ function elevatorDissapear(event) {
   switch (event.type) {
     case "animationend":
       elevator.classList.add("elevatorDissapear");
-      elevator.style.display = "none";
+      setTimeout(() => {
+        elevator.style.display = "none";
+
+      }, 1000);
       danny.style.display = "block";
-      findMother.style.display = "block";
+      // findMother.style.display = "block";
 
       audio4.play();
       audio3.pause();
@@ -141,20 +154,20 @@ function elevatorDissapear(event) {
   }
 }
 
-// tonny talkingtotony
-const findMother = document.getElementById("findMother")
-const up = document.getElementById("up");
+// // tonny talkingtotony
+// const findMother = document.getElementById("findMother")
+// const up = document.getElementById("up");
 
-up.addEventListener("animationend", doorGame, false);
+// up.addEventListener("animationend", doorGame, false);
 
-function doorGame(event) {
-  switch (event.type) {
-    case "animationend":
-      body.classList.add("moveDown");
+// function doorGame(event) {
+//   switch (event.type) {
+//     case "animationend":
+//       body.classList.add("moveDown");
 
 
-      audio4.pause();
-      audio3.play();
-      break;
-  }
-}
+//       audio4.pause();
+//       audio3.play();
+//       break;
+//   }
+// }

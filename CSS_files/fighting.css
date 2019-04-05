@@ -341,14 +341,6 @@ body {
   }
 }
 
-audio {
-  grid-area: 1/2/span 1/ span 1;
-}
-
-iframe {
-  display: none;
-}
-
 
 .zoomin {
   animation: zoomin 5s linear forwards 1;
@@ -379,33 +371,37 @@ iframe {
  /* */
 
 .hitting {
+  z-index: -1;
   display: flex;
   justify-content: center;
   display: none;
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  background-image: url(../images/wendyjack1-04.png);
+  background-image: url(../images/fighting/wendyjack1-04.png);
+  animation: appearFight 4.6s linear 1 forwards;
 
 }
 
 .hittinAnimation1 {
-  animation: appearFight 4.6s linear 2 forwards;
+  animation: appearFight2 4.6s linear 1 forwards;
+
 
 }
 
 
 @keyframes appearFight {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
 
   100% {
-    opacity: 1;
+    opacity: 0;
 
   }
 
 }
+
 
 
 .dissapear {
@@ -493,7 +489,7 @@ iframe {
 .todisplaynone {
   display: none;
   opacity: 0;
-  animation: appearElevator 1s 0.5s linear 1 forwards;
+  animation: appearElevator 1s 2s linear 1 forwards;
 
 
 }
@@ -654,6 +650,8 @@ iframe {
 
 .talkingtotony {
   display: none;
+  animation: talkingtony1 1s 2s linear 1 forwards;
+
 }
 
 .up {
@@ -664,7 +662,7 @@ iframe {
   overflow: hidden;
   position: absolute;
   justify-self: center;
-  animation: talkingtony 1s 2.2s linear 20;
+  animation: talkingtony 1s 1s linear 20;
   height: 100%;
   width: 100%;
 }
@@ -679,7 +677,18 @@ iframe {
   justify-self: center;
   height: 100%;
   z-index: -1;
+
   width: 100%;
+}
+
+@keyframes talkingtony1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes talkingtony {
