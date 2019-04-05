@@ -629,3 +629,30 @@ iframe {
 
 
 }
+
+.elevatorDissapear {
+  animation: elDissapear 1s 1s linear forwards 1;
+}
+
+@keyframes elDissapear {
+  100% {
+    opacity: 0;
+  }
+}
+
+/* talling to tony */
+.talkingtotony {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+
+}
+
+.firstTonyImage {
+  background-image: url("../images/boy-04.png");
+}
+
+.secondTonyImage {
+  background-image: url("../images/boy-03.png");
+
+}

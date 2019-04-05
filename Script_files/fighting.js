@@ -114,3 +114,31 @@ function bloodAppear(event) {
       break;
   }
 }
+
+
+
+// blood elevator dissapears
+const bloodOcean = document.getElementById("bloodOcean");
+
+bloodOcean.addEventListener("animationend", elevatorDissapear, false);
+
+function elevatorDissapear(event) {
+  switch (event.type) {
+    case "animationend":
+      elevator.classList.add("elevatorDissapear");
+      break;
+  }
+}
+
+// tonny talkingtotony
+const danny = document.getElementById("talkingtotony");
+
+elevator.addEventListener("animationend", tonnyTalking, false);
+
+function tonyTalking(event) {
+  switch (event.type) {
+    case "animationend":
+      elevator.classList.add("elevatorDissapear");
+      break;
+  }
+}
