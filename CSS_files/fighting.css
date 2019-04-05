@@ -650,7 +650,6 @@ body {
 
 .talkingtotony {
   display: none;
-  animation: talkingtony1 1s 2s linear 1 forwards;
 
 }
 
@@ -659,25 +658,24 @@ body {
   background-image: url(../images/boy-03.png);
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
   position: absolute;
   justify-self: center;
-  animation: talkingtony 1s 1s linear 20;
+  animation: talkingtony 1s linear 20;
   height: 100%;
   width: 100%;
 }
 
 .down {
   display: flex;
+  opacity: 0;
   background-image: url(../images/boy-04.png);
   background-repeat: no-repeat;
   background-size: contain;
-  overflow: hidden;
   position: absolute;
   justify-self: center;
   height: 100%;
   z-index: -1;
-
+  animation: talkingtony1 1s linear 1 forwards;
   width: 100%;
 }
 

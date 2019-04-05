@@ -143,8 +143,10 @@ function elevatorDissapear(event) {
       elevator.classList.add("elevatorDissapear");
       setTimeout(() => {
         elevator.style.display = "none";
+        elevator.classList.remove("elevatorDissapear");
 
-      }, 1000);
+
+      }, 0);
       danny.style.display = "block";
       // findMother.style.display = "block";
 
