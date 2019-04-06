@@ -649,7 +649,7 @@ body {
 /* talling to tony */
 
 .talkingtotony {
-  /* display: none; */
+  display: none;
   height: 100vh;
   width: 100vw;
 }
@@ -660,9 +660,7 @@ body {
   background-size: cover;
   position: absolute;
   justify-self: center;
-  /* animation: talkingtony 1s linear 23; */
-  animation: talkingtony 1s linear 5;
-
+  animation: talkingtony 1s linear 23;
   height: 100vh;
   width: 100vw;
 
@@ -854,5 +852,34 @@ extra*/
 
   to {
     background-position: -6499px
+  }
+}
+
+/* running towards maze wendy */
+
+.runningTowardsmaze {
+  display: none;
+  overflow: hidden;
+  display: flex;
+  background-image: url("../images/running_towards_maze/snowmaze-02.png");
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wendyRunning {
+
+  align-self: flex-end;
+  background-image: url("../images/running_towards_maze/wendywalking-03.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40vw;
+  height: 50vh;
+  animation: runningTomaze 4s 1s ease-in 1 forwards;
+}
+
+@keyframes runningTomaze {
+  100% {
+    transform: translate(70vw, -10vh);
   }
 }
