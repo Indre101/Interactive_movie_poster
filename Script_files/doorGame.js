@@ -1,3 +1,33 @@
+const finding = document.querySelector("#findMother");
+const up1 = document.getElementById("up");
+const danny1 = document.getElementById("talkingtotony");
+const body1 = document.querySelector("body");
+const axe = document.getElementById("axeDisplay")
+
+window.addEventListener("load", axe.classList.add("axenodisplay"));
+
+up1.addEventListener("animationend", doorGame, false);
+
+function doorGame(event) {
+  switch (event.type) {
+    case "animationend":
+      finding.style.display = "block";
+
+      setTimeout(() => {
+        body1.classList.add("moveDown");
+
+      }, 1000);
+      // setTimeout(() => {
+      //   danny1.style.display = "none";
+
+      // }, 3000);
+
+      break;
+  }
+}
+
+
+
 let mother = "./images/fighting/wendy-06.png";
 let evil1 = "./images/fighting/jack-03.png"
 let evil2 = "./images/twins.png";
@@ -131,26 +161,21 @@ thirdDoor.onclick = function () {
 };
 
 /// GameOver function
-const finding = document.querySelector("#findMother");
 const audioAxe = new Audio("./audio/axe-scene.mp3");
 
 const gameOver = status => {
   if (status === "win") {
-    startButton.textContent = "Good Job";
-    noDoubleClicking(event);
-    //   firstDoor.style.pointerEvents = "none";
-    // secondDoor.style.pointerEvents = "none";
-    // thirdDoor.style.pointerEvents = "none";
+    // startButton.textContent = "Good Job";
+    // body1.classList.remove("moveDown");
+    startButton.style.display = "none";
+    finding.style.position = "absolute";
 
     setTimeout(() => {
-      finding.classList.add("moveLeft");
-      document.getElementById("axeDisplay").style.display = "block";
-      setTimeout(() => {
-        finding.style.display = "none";
-
-      }, 1000);
+      axe.classList.remove("axenodisplay");
+      axe.classList.add("moveLeft");
       audioAxe.play();
-    }, 2000);
+
+    }, 1500);
 
 
   } else {
@@ -180,8 +205,7 @@ startButton.onclick = function () {
   openDoors();
 
   if (notStarted()) {
-    // startOver();
-    console.log("notstarted true")
+    startOver();
   }
 };
 

@@ -649,7 +649,7 @@ body {
 /* talling to tony */
 
 .talkingtotony {
-  display: none;
+  /* display: none; */
   height: 100vh;
   width: 100vw;
 }
@@ -660,7 +660,9 @@ body {
   background-size: cover;
   position: absolute;
   justify-self: center;
-  animation: talkingtony 1s linear 23;
+  /* animation: talkingtony 1s linear 23; */
+  animation: talkingtony 1s linear 5;
+
   height: 100vh;
   width: 100vw;
 
@@ -704,13 +706,21 @@ body {
 
 .findMother {
   display: none;
+  opacity: 0;
   background-color: bisque;
   width: 100vw;
   height: 100vh;
   text-align: center;
-
+  animation: appearGame 1s 1s linear 1 forwards;
 
 }
+
+@keyframes appearGame {
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .rules li {
   list-style: none;
@@ -752,10 +762,11 @@ body {
 
 .moveDown {
   animation: moveDown 3s linear 1 forwards;
+  overflow: hidden;
 }
 
 @keyframes moveDown {
-  100% {
+  to {
     transform: translateY(-102vh);
   }
 }
@@ -766,51 +777,56 @@ body {
 /* axe fight scene */
 
 
+
+
+.axeDisplay {
+  height: 100vh;
+  width: 100vw;
+
+}
+
+.axenodisplay {
+  display: none;
+
+}
+
 .moveLeft {
+  overflow: hidden;
   animation: moveLeft 1s linear 1 forwards;
 }
 
 @keyframes moveLeft {
-  100% {
-    transform: translateX(100vw);
-  }
-}
+  0% {
+    transform: translateX(-100vw);
 
-.axeDisplay {
-  display: none;
-  height: 100vh;
-  width: 100vw;
+  }
+
+  100% {
+    display: block;
+    transform: translateX(0);
+  }
 }
 
 .background {
-  opacity: 0;
   display: flex;
-  background-image: url(../images/jackwendybathroom-03.png);
+  float: right;
+  background-image: url("../images/jackwendybathroom-03.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  opacity: 0;
-  animation: appearAxe 2s linear 1 forwards;
-
-
 }
 
-@keyframes appearAxe {
-  100% {
-    opacity: 1;
-  }
-}
 
-#character {
-  background-image: url(../images/Asset_1@2x.png);
+.character {
+  background-image: url("../images/Asset_1@2x.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   bottom: -29%;
   left: 4.5%;
-  animation: axing 1s steps(8) 20;
+  animation: axing 1s 3s steps(8) 20;
   width: 812.375px;
   height: 1012px;
 }
@@ -832,11 +848,11 @@ body {
 extra*/
 
 @keyframes axing {
-  to {
+  /* from {
     background-position: 406.25px;
-  }
+  } */
 
-  100% {
+  to {
     background-position: -6499px
   }
 }

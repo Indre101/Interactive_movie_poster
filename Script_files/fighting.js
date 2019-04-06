@@ -147,6 +147,7 @@ function elevatorDissapear(event) {
 
 
       }, 0);
+
       danny.style.display = "block";
       // findMother.style.display = "block";
 
@@ -157,22 +158,26 @@ function elevatorDissapear(event) {
 }
 
 // // tonny talkingtotony
-const findMother = document.getElementById("findMother")
-const up = document.getElementById("up");
+// const findMother = document.getElementById("findMother")
+// const up = document.getElementById("up");
 
-up.addEventListener("animationend", doorGame, false);
+// up.addEventListener("animationend", doorGame, false);
 
-function doorGame(event) {
-  switch (event.type) {
-    case "animationend":
-      danny.classList.add("moveDown");
-      setTimeout(() => {
-        danny.style.display = "none";
+// function doorGame(event) {
+//   switch (event.type) {
+//     case "animationend":
+//       findMother.style.display = "block";
 
-      }, 3000);
-      findMother.style.display = "block";
-      audio4.pause();
-      audio3.play();
-      break;
-  }
-}
+//       setTimeout(() => {
+//         body.classList.add("moveDown");
+
+//       }, 1000);
+//       setTimeout(() => {
+//         danny.style.display = "none";
+
+//       }, 3000);
+//       audio4.pause();
+//       audio3.play();
+//       break;
+//   }
+// }
