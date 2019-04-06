@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+.moveLeft {
+	animation: moveLeft 1s linear 1 forwards;
+}
+
+@keyframes moveLeft {
+	100% {
+		transform: translateY(100vw);
+	}
+}
+
+.axeDisplay {
+	display: none;
+}
+
+.background {
+	opacity: 0;
+	display: flex;
+	background-image: url(../images/jackwendybathroom-03.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	position: absolute;
+	justify-self: center;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	animation: appearAxe 2s linear 1 forwards;
+
+
+}
+
+@keyframes appearAxe {
+	100% {
+		opacity: 1;
+	}
+}
+
+#character {
+	background-image: url(../images/Asset_1@2x.png);
+	background-repeat: no-repeat;
+	align-self: flex-end;
+	background-size: cover;
+	position: absolute;
+	bottom: -29%;
+	left: 4.5%;
+
+	animation: axing 1s steps(8) infinite;
+	width: 812.375px;
+	height: 1012px;
+}
+
+/*extra
+#jack-coming-in{
+	background-image: url(Graphics/jackwithaxe-05.png);
+	background-repeat: no-repeat;
+	align-self: flex-end;
+	position: absolute;
+	
+	animation: walk_in 5s linear 1;}
+
+@keyframes walk_in {
+	0%{transform: translateX(-10vw)}
+	99%{transform:translateX(40vw)}
+	100%{opacity: 0%}
+}
+extra*/
+
+@keyframes axing {
+	to {
+		background-position: 406.25px;
+	}
+
+	100% {
+		background-position: -6499px
+	}
+}

@@ -699,17 +699,6 @@ body {
 }
 
 
-#btnFindMother {
-  display: none;
-  opacity: 0;
-  animation: appearbtn1 1s linear forwards;
-}
-
-@keyframes appearbtn1 {
-  100% {
-    opacity: 1;
-  }
-}
 
 /* door game css */
 
@@ -720,8 +709,8 @@ body {
   height: 100vh;
   text-align: center;
 
-}
 
+}
 
 .rules li {
   list-style: none;
@@ -746,12 +735,11 @@ body {
 
 /* start button */
 
-#startDoor,
-.btnFindMother {
+#startDoor {
   display: flex;
   margin: 0 auto;
   font-size: 2em;
-  background-image: url(../images/blood-buttons.png);
+  background-image: url("../images/blood-buttons.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 350px;
@@ -769,5 +757,86 @@ body {
 @keyframes moveDown {
   100% {
     transform: translateY(-102vh);
+  }
+}
+
+/* axe fight scene */
+/* axe fight scene */
+/* axe fight scene */
+/* axe fight scene */
+
+
+.moveLeft {
+  animation: moveLeft 1s linear 1 forwards;
+}
+
+@keyframes moveLeft {
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+.axeDisplay {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+.background {
+  opacity: 0;
+  display: flex;
+  background-image: url(../images/jackwendybathroom-03.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  animation: appearAxe 2s linear 1 forwards;
+
+
+}
+
+@keyframes appearAxe {
+  100% {
+    opacity: 1;
+  }
+}
+
+#character {
+  background-image: url(../images/Asset_1@2x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: -29%;
+  left: 4.5%;
+  animation: axing 1s steps(8) 20;
+  width: 812.375px;
+  height: 1012px;
+}
+
+/*extra
+#jack-coming-in{
+	background-image: url(Graphics/jackwithaxe-05.png);
+	background-repeat: no-repeat;
+	align-self: flex-end;
+	position: absolute;
+	
+	animation: walk_in 5s linear 1;}
+
+@keyframes walk_in {
+	0%{transform: translateX(-10vw)}
+	99%{transform:translateX(40vw)}
+	100%{opacity: 0%}
+}
+extra*/
+
+@keyframes axing {
+  to {
+    background-position: 406.25px;
+  }
+
+  100% {
+    background-position: -6499px
   }
 }

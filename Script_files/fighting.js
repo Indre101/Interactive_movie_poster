@@ -165,7 +165,11 @@ up.addEventListener("animationend", doorGame, false);
 function doorGame(event) {
   switch (event.type) {
     case "animationend":
-      body.classList.add("moveDown");
+      danny.classList.add("moveDown");
+      setTimeout(() => {
+        danny.style.display = "none";
+
+      }, 3000);
       findMother.style.display = "block";
       audio4.pause();
       audio3.play();

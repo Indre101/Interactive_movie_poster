@@ -131,10 +131,27 @@ thirdDoor.onclick = function () {
 };
 
 /// GameOver function
+const finding = document.querySelector("#findMother");
+const audioAxe = new Audio("./audio/axe-scene.mp3");
 
 const gameOver = status => {
   if (status === "win") {
-    startButton.textContent = "You win! Play again?";
+    startButton.textContent = "Good Job";
+    noDoubleClicking(event);
+    //   firstDoor.style.pointerEvents = "none";
+    // secondDoor.style.pointerEvents = "none";
+    // thirdDoor.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      finding.classList.add("moveLeft");
+      document.getElementById("axeDisplay").style.display = "block";
+      setTimeout(() => {
+        finding.style.display = "none";
+
+      }, 1000);
+      audioAxe.play();
+    }, 2000);
+
 
   } else {
     startButton.textContent = "Game over! play again?";
@@ -163,7 +180,8 @@ startButton.onclick = function () {
   openDoors();
 
   if (notStarted()) {
-    startOver();
+    // startOver();
+    console.log("notstarted true")
   }
 };
 
