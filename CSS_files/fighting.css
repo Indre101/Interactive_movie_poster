@@ -783,14 +783,11 @@ body {
 
 }
 
-.axenodisplay {
-  display: none;
 
-}
 
 .moveLeft {
   overflow: hidden;
-  animation: moveLeft 1s linear 1 forwards;
+  animation: moveLeft 2s linear 1 forwards;
 }
 
 @keyframes moveLeft {
@@ -858,13 +855,28 @@ extra*/
 /* running towards maze wendy */
 
 .runningTowardsmaze {
-  display: none;
   overflow: hidden;
-  display: flex;
   background-image: url("../images/running_towards_maze/snowmaze-02.png");
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
+  animation: appearingFromBottom 2s linear 1 forwards;
+}
+
+.axenodisplay {
+  display: none;
+
+}
+
+@keyframes appearingFromBottom {
+  0% {
+    transform: translateY(-100vh)
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .wendyRunning {
@@ -875,7 +887,7 @@ extra*/
   background-size: contain;
   width: 40vw;
   height: 50vh;
-  animation: runningTomaze 4s 1s ease-in 1 forwards;
+  animation: runningTomaze 4s 2.5s ease-in 1 forwards;
 }
 
 @keyframes runningTomaze {
@@ -883,3 +895,5 @@ extra*/
     transform: translate(70vw, -10vh);
   }
 }
+
+/* maze styling  */

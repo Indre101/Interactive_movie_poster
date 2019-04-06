@@ -157,27 +157,29 @@ function elevatorDissapear(event) {
   }
 }
 
-// // tonny talkingtotony
-// const findMother = document.getElementById("findMother")
-// const up = document.getElementById("up");
+// transistion to running to maze
 
-// up.addEventListener("animationend", doorGame, false);
+const character = document.getElementById("character");
+const finding1 = document.querySelector("#findMother");
+const axe1 = document.getElementById("axeDisplay")
+const runningTowardsMaze = document.getElementById("runningTowardsmaze");
+window.addEventListener("load", runningTowardsMaze.classList.add("axenodisplay"));
 
-// function doorGame(event) {
-//   switch (event.type) {
-//     case "animationend":
-//       findMother.style.display = "block";
 
-//       setTimeout(() => {
-//         body.classList.add("moveDown");
 
-//       }, 1000);
-//       setTimeout(() => {
-//         danny.style.display = "none";
+character.addEventListener("animationend", transitionToMaze, false);
 
-//       }, 3000);
-//       audio4.pause();
-//       audio3.play();
-//       break;
-//   }
-// }
+
+function transitionToMaze(event) {
+  switch (event.type) {
+    case "animationend":
+      finding1.style.display = "none";
+      axe1.style.position = "absolute";
+
+      setTimeout(() => {
+        runningTowardsMaze.classList.remove("axenodisplay");
+        runningTowardsMaze.style.display = "flex";
+      }, 1500);
+      break;
+  }
+}

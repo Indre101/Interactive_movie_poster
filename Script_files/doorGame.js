@@ -6,6 +6,7 @@ const axe = document.getElementById("axeDisplay")
 
 window.addEventListener("load", axe.classList.add("axenodisplay"));
 
+
 up1.addEventListener("animationend", doorGame, false);
 
 function doorGame(event) {
