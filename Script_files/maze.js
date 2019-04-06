@@ -1,10 +1,15 @@
 const btn1 = document.getElementById("btn3");
+const bgEnding = document.getElementById("bgEnding");
+const mazeGameContainer = document.getElementById("mazeGameContainer");
 
+
+window.addEventListener("load", bgEnding.classList.add("bgNone"));
 
 btn1.onclick = function () {
   this.disabled = true;
   start();
 }
+
 
 let template = [
 
@@ -131,11 +136,20 @@ function keyPress(e) {
 
   ctx.drawImage(child, player.x * 32, player.y * 32, 32, 32);
   if (maze[player.loc].state == 2) {
-    alert("You win!");
-    location.reload();
+
+    mazeGameContainer.style.position = "absolute";
+    setTimeout(() => {
+      bgEnding.classList.remove("bgNone");
+      bgEnding.classList.add("bgGrid");
+    }, 1000);
+
+
+
+
+
+    // location.reload();
   }
 
-  document.getElementById("moves").innerHTML = "moves" + player.moves;
 }
 
 function start() {

@@ -3,14 +3,35 @@ body {
 
 }
 
-.bg {
+.bgEnding {
   background-image: url("../images/mountain_hotel.png");
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
   grid-template-columns: repeat(6, 1fr)/200px 1fr 200px;
+  animation: appearFromBottom 2s 1s linear 1 forwards;
+}
+
+@keyframes appearFromBottom {
+  0% {
+    transform: translateY(100vh);
+
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.bgGrid {
+  display: grid;
+
+}
+
+.bgNone {
+  display: none;
 }
 
 .snow {
