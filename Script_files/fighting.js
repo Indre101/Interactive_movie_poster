@@ -74,7 +74,7 @@ bat.onclick = function () {
     hitting.classList.add("hittinAnimation1");
     hitting.style.display = "block";
     setTimeout(() => {
-      hitting.style.backgroundImage = "url('././images/wendyjack-03.png')";
+      hitting.style.backgroundImage = "url('././images/fighting/wendyjack-03.png')";
       document.querySelector(".hittinAnimation1").style.display = "block";
       blood.forEach(function (e) {
         e.style.display = "block";
@@ -179,7 +179,27 @@ function transitionToMaze(event) {
       setTimeout(() => {
         runningTowardsMaze.classList.remove("axenodisplay");
         runningTowardsMaze.style.display = "flex";
-      }, 1500);
+      }, 1000);
+      break;
+  }
+}
+
+// showing the maze gameeee
+const mazeGame = document.getElementById("mazeGameContainer");
+const wendyRunning = document.getElementById("wendyRunning")
+
+character.addEventListener("animationend", showingMazeGame, false);
+
+
+function showingMazeGame(event) {
+  switch (event.type) {
+    case "animationend":
+      axe1.style.display = "none";
+      runningTowardsMaze.style.position = "absolute";
+
+      setTimeout(() => {
+        mazeGame.style.display = "block";
+      }, 7000);
       break;
   }
 }

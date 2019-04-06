@@ -1,17 +1,50 @@
-body {
-  background-color: black;
+.mazeGameContainer {
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("../images/grassfrozen.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90vw;
+  height: 90vh;
+  opacity: 0;
+  animation: appearMaze 2s 1s linear 1 forwards;
+
+}
+
+@keyframes appearMaze {
+  100% {
+    opacity: 1;
+  }
+}
+
+.headingMaze {
+  padding-top: 6vh;
 }
 
 canvas {
+  top: 30vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
-  /* margin-left: 22%;
-  border: 2px solid black; */
+
 }
 
-label {
-  color: white;
-}
 
-button {
-  background-color: white
+
+.mazeLayoutBTN {
+  margin: 2em;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/blood-buttons.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 200px;
+  cursor: pointer;
+  margin: 0 auto;
 }

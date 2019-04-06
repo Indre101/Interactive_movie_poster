@@ -1,4 +1,4 @@
-const btn1 = document.getElementById("btn");
+const btn1 = document.getElementById("btn3");
 
 
 btn1.onclick = function () {
@@ -30,12 +30,13 @@ const canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 const child = new Image();
-child.src = "./images/door.jpg";
+child.src = "./images/boySide.png";
 
-let mother = new Image();
-mother.src = "./images/reddoors.gif";
+let mother1 = new Image();
+mother1.src = "./images/running_towards_maze/wendywalking-03.png";
 
 let wall = new Image;
+
 wall.src = "./images/bush_winter.png";
 
 let maze = [];
@@ -144,7 +145,7 @@ function start() {
       ctx.drawImage(wall, maze[i].x * 32, maze[i].y * 32, 32, 32);
 
     if (maze[i].state == 2 || maze[i].state == "2")
-      ctx.drawImage(mother, maze[i].x * 32, maze[i].y * 32, 32, 32);
+      ctx.drawImage(mother1, maze[i].x * 32, maze[i].y * 32, 32, 32);
 
 
   }
