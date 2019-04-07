@@ -3,10 +3,10 @@ const car = document.getElementById("car");
 
 car.addEventListener("animationend", listener, false);
 
-let i = 0;
+let k = 0;
 
 function listener(event) {
-  i++
+  k++
 
   switch (event.type) {
     case "animationend":
@@ -15,7 +15,7 @@ function listener(event) {
       if (i == 2) {
         clear();
       } else {
-        i = 1;
+        k = 1;
         car.classList.remove("car1");
         car.classList.add("car2");
         car.style.backgroundImage = "url('././images/snowmobileturn.png')"
