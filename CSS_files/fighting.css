@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Afl-font', sans-serif;
+  overflow: hidden;
 
 }
 
@@ -15,7 +16,6 @@ body {
   height: 100vh;
   background-image: url(../images/fighting/livingroom-02.png);
   background-size: cover;
-  overflow: hidden;
 }
 
 .bodyDissapear {
@@ -778,6 +778,7 @@ body {
 
 
 .axeDisplay {
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
 
@@ -807,7 +808,7 @@ body {
   float: right;
   background-image: url("../images/jackwendybathroom-03.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -887,7 +888,7 @@ extra*/
   background-size: contain;
   width: 40vw;
   height: 50vh;
-  animation: runningTomaze 4s 2s ease-in 1 forwards;
+  animation: runningTomaze 4s 1s ease-in 1 forwards;
 }
 
 @keyframes runningTomaze {
@@ -912,7 +913,7 @@ extra*/
   width: 100vw;
   height: 100vh;
   opacity: 0;
-  animation: appearMaze 2s 1s linear 1 forwards;
+  animation: appearMaze 2s linear 1 forwards;
 
 }
 

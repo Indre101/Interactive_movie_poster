@@ -4,7 +4,7 @@ const bat = document.getElementById("bat");
 const container = document.getElementById("container");
 const hitting = document.getElementById("hitting");
 const blood = document.querySelectorAll(".blood");
-let audio1 = document.querySelector("#audio1");
+const audio1 = document.querySelector("#audio1");
 const body = document.querySelector("body");
 const audio3 = new Audio("././audio/very_creepy_sound_1.mp3");
 const audio4 = new Audio("././audio/tony_im_scared.mp3");
@@ -185,21 +185,21 @@ function transitionToMaze(event) {
 }
 
 // showing the maze gameeee
-const mazeGame = document.getElementById("mazeGameContainer");
-const wendyRunning = document.getElementById("wendyRunning")
+// const mazeGameContainer1 = document.getElementById("mazeGameContainer");
+// const wendyRunning = document.getElementById("wendyRunning")
 
-character.addEventListener("animationend", showingMazeGame, false);
+// wendyRunning.addEventListener("animationend", showingMazeGame, false);
 
 
-function showingMazeGame(event) {
-  switch (event.type) {
-    case "animationend":
-      axe1.style.display = "none";
-      runningTowardsMaze.style.position = "absolute";
+// function showingMazeGame(event) {
+//   switch (event.type) {
+//     case "animationend":
+//       axe1.style.display = "none";
+//       runningTowardsMaze.style.position = "absolute";
 
-      setTimeout(() => {
-        mazeGame.style.display = "block";
-      }, 7000);
-      break;
-  }
-}
+//       setTimeout(() => {
+//         mazeGameContainer1.style.display = "block";
+//       }, 7000);
+//       break;
+//   }
+// }

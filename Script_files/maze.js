@@ -1,13 +1,35 @@
-const btn1 = document.getElementById("btn3");
+const btnMaze = document.getElementById("btn3");
 const bgEnding = document.getElementById("bgEnding");
-const mazeGameContainer = document.getElementById("mazeGameContainer");
+// const mazeGameContainer1 = document.getElementById("mazeGameContainer");
+
+// show maze
+
+const mazeGameContainer1 = document.getElementById("mazeGameContainer");
+const wendyRunning = document.getElementById("wendyRunning")
+
+wendyRunning.addEventListener("animationend", showingMazeGame, false);
+
+
+function showingMazeGame(event) {
+  switch (event.type) {
+    case "animationend":
+      axe1.style.display = "none";
+      runningTowardsMaze.style.position = "absolute";
+
+      setTimeout(() => {
+        mazeGameContainer1.style.display = "block";
+      }, 3000);
+      break;
+  }
+}
+// show maze
 
 
 window.addEventListener("load", bgEnding.classList.add("bgNone"));
 
-btn1.onclick = function () {
+btnMaze.onclick = function () {
   this.disabled = true;
-  start();
+  startMazeGame();
 }
 
 
@@ -34,17 +56,17 @@ const canvas = document.getElementById("canvas");
 
 let ctx = canvas.getContext("2d");
 
-const child = new Image();
-child.src = "./images/boySide.png";
+const childRunning = new Image();
+childRunning.src = "./images/boySide.png";
 
-let mother1 = new Image();
-mother1.src = "./images/running_towards_maze/wendywalking-03.png";
+let motherWating = new Image();
+motherWating.src = "./images/running_towards_maze/wendywalking-03.png";
 
 let wall = new Image;
 
 wall.src = "./images/bush_winter.png";
 
-let maze = [];
+let mazeLayoutGame = [];
 
 let player = new Object({
   x: 0,
@@ -60,7 +82,7 @@ let y = 0;
 
 for (let i = 0; i < 15 * 15; i++) {
 
-  maze.push({
+  mazeLayoutGame.push({
     "x": x,
     "y": y,
     "state": template[i]
@@ -81,7 +103,7 @@ function keyPress(e) {
       if (player.x != 14) {
 
         player.loc++;
-        if (maze[player.loc].state != 1) {
+        if (mazeLayoutGame[player.loc].state != 1) {
           ctx.clearRect(player.x * 32, player.y * 32, 32, 32);
           player.x++;
           player.moves++;
@@ -97,7 +119,7 @@ function keyPress(e) {
       if (player.x != 0) {
         player.loc--;
 
-        if (maze[player.loc].state != 1) {
+        if (mazeLayoutGame[player.loc].state != 1) {
           ctx.clearRect(player.x * 32, player.y * 32, 32, 32);
           player.x--;
           player.moves++;
@@ -110,7 +132,7 @@ function keyPress(e) {
     case 40: // down 
       if (player.y != 14) {
         player.loc += 15;
-        if (maze[player.loc].state != 1) {
+        if (mazeLayoutGame[player.loc].state != 1) {
           ctx.clearRect(player.x * 32, player.y * 32, 32, 32);
           player.y++;
           player.moves++;
@@ -123,7 +145,7 @@ function keyPress(e) {
     case 38: // up 
       if (player.y != 0) {
         player.loc -= 15;
-        if (maze[player.loc].state != 1) {
+        if (mazeLayoutGame[player.loc].state != 1) {
           ctx.clearRect(player.x * 32, player.y * 32, 32, 32);
           player.y--;
           player.moves++;
@@ -134,10 +156,10 @@ function keyPress(e) {
       break;
   }
 
-  ctx.drawImage(child, player.x * 32, player.y * 32, 32, 32);
-  if (maze[player.loc].state == 2) {
+  ctx.drawImage(childRunning, player.x * 32, player.y * 32, 32, 32);
+  if (mazeLayoutGame[player.loc].state == 2) {
 
-    mazeGameContainer.style.position = "absolute";
+    mazeGameContainer1.style.position = "absolute";
     setTimeout(() => {
       bgEnding.classList.remove("bgNone");
       bgEnding.classList.add("bgGrid");
@@ -152,18 +174,23 @@ function keyPress(e) {
 
 }
 
-function start() {
+function startMazeGame() {
   console.log(true)
   for (let i = 0; i < 15 * 15; i++) {
-    if (maze[i].state == 1 || maze[i].state == "1")
-      ctx.drawImage(wall, maze[i].x * 32, maze[i].y * 32, 32, 32);
 
-    if (maze[i].state == 2 || maze[i].state == "2")
-      ctx.drawImage(mother1, maze[i].x * 32, maze[i].y * 32, 32, 32);
+    if (mazeLayoutGame[i].state == 1 || mazeLayoutGame[i].state == "1") {
+      console.log("pirmas if")
+      ctx.drawImage(wall, mazeLayoutGame[i].x * 32, mazeLayoutGame[i].y * 32, 32, 32);
+    }
 
+    if (mazeLayoutGame[i].state == 2 || mazeLayoutGame[i].state == "2") {
+      console.log("antras if")
+
+      ctx.drawImage(motherWating, mazeLayoutGame[i].x * 32, mazeLayoutGame[i].y * 32, 32, 32);
+    }
 
   }
-  ctx.drawImage(child, player.x * 32, player.y * 32, 32, 32);
+  ctx.drawImage(childRunning, player.x * 32, player.y * 32, 32, 32);
 
   window.addEventListener("keydown", keyPress, true);
 
