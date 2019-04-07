@@ -1,6 +1,5 @@
 const finding = document.querySelector("#findMother");
-const up1 = document.getElementById("up");
-const danny1 = document.getElementById("talkingtotony");
+const up1 = document.getElementById("upTony");
 const body1 = document.querySelector("body");
 const axe = document.getElementById("axeDisplay")
 
@@ -166,6 +165,7 @@ const audioAxe = new Audio("./audio/axe-scene.mp3");
 
 const gameOver = status => {
   if (status === "win") {
+    console.log("you win door game")
     // startButton.textContent = "Good Job";
     // body1.classList.remove("moveDown");
     startButton.style.display = "none";

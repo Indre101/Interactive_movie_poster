@@ -13,6 +13,8 @@ wendyRunning.addEventListener("animationend", showingMazeGame, false);
 function showingMazeGame(event) {
   switch (event.type) {
     case "animationend":
+      // danny.style.display = "none";
+
       axe1.style.display = "none";
       runningTowardsMaze.style.position = "absolute";
 

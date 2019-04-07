@@ -652,21 +652,25 @@ body {
   display: none;
   height: 100vh;
   width: 100vw;
+
 }
 
-.up {
+
+
+.upTony {
   background-image: url(../images/boy-03.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
   justify-self: center;
   animation: talkingtony 1s linear 23;
+
   height: 100vh;
   width: 100vw;
 
 }
 
-.down {
+.downTony {
   opacity: 0;
   background-image: url(../images/boy-04.png);
   background-repeat: no-repeat;
@@ -676,6 +680,7 @@ body {
   height: 100vh;
   width: 100vw;
   animation: talkingtony1 1s linear 1 forwards;
+
 }
 
 @keyframes talkingtony1 {
@@ -703,7 +708,7 @@ body {
 /* door game css */
 
 .findMother {
-  display: none;
+  /* display: none; */
   opacity: 0;
   background-color: bisque;
   width: 100vw;
@@ -823,6 +828,7 @@ body {
   bottom: -29%;
   left: 4.5%;
   animation: axing 1s 2.5s steps(8) 15;
+
   width: 812.375px;
   height: 1012px;
 }
@@ -908,7 +914,7 @@ extra*/
   margin: 0 auto;
   text-align: center;
   background-image: url("../images/grassfrozen.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -928,12 +934,12 @@ extra*/
 }
 
 canvas {
-  top: 30vh;
+  /* top: 30vh;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  position: absolute;
+  position: absolute; */
 
 }
 
