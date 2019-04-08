@@ -708,9 +708,10 @@ body {
 /* door game css */
 
 .findMother {
-  /* display: none; */
+  display: none;
   opacity: 0;
-  background-color: bisque;
+  background-image: url(../images/grassfrozen.jpg);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   text-align: center;

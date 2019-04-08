@@ -190,17 +190,18 @@
 }
 
 .callToAction {
+  grid-area: 1/2/ span 1/ span 1;
   text-align: center;
   line-height: 2em;
   float: right;
   opacity: 0;
   width: 500px;
-  background-color: #5d130f;
+  /* background-color: #5d130f; */
   animation: appearCall 1s 2s linear forwards 1;
 }
 
 .callToAction h2 {
-  color: white;
+  /* color: b; */
 }
 
 

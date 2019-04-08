@@ -32,7 +32,7 @@ function doorGame(event) {
 
 
 let mother = "./images/fighting/wendy-06.png";
-let evil1 = "./images/fighting/jack-03.png"
+let evil1 = "./images/jackwithaxe-05.png"
 let evil2 = "./images/twins.png";
 
 let door1;
