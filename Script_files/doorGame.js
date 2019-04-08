@@ -54,6 +54,7 @@ const notStarted = () => {
     return true;
   } else {
     return false;
+
   }
 };
 
@@ -62,7 +63,6 @@ function noDoubleClicking(event) {
 }
 
 const startClicked = () => {
-  startButton.style.webkitAnimationPlayState = "paused";
   startButton.textContent = "Good Luck!";
 };
 
