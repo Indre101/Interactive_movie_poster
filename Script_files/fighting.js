@@ -173,11 +173,12 @@ character.addEventListener("animationend", transitionToMaze, false);
 function transitionToMaze(event) {
   switch (event.type) {
     case "animationend":
+
       finding1.style.display = "none";
       axe1.style.position = "absolute";
 
       setTimeout(() => {
-        audioDoorGame.play();
+        audio3.play();
         audioAxe.pause();
         runningTowardsMaze.classList.remove("axenodisplay");
         runningTowardsMaze.style.display = "flex";
