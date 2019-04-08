@@ -30,7 +30,7 @@ function showingMazeGame(event) {
 window.addEventListener("load", bgEnding.classList.add("bgNone"));
 
 btnMaze.onclick = function () {
-  btnMaze.style.display = "none";
+  btnMaze.textContent = "Good Luck";
   this.disabled = true;
   startMazeGame();
 }
