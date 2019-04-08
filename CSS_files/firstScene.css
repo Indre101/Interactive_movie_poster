@@ -34,8 +34,6 @@
 }
 
 #start {
-  opacity: 0;
-  display: flex;
   text-align: center;
   align-self: center;
   background-image: url("../images/blood-buttons.png");
@@ -49,7 +47,20 @@
   cursor: pointer;
 }
 
+.startButtonDisplayNone {
+  display: none;
+}
+
+.startButtonDisplay {
+  display: flex;
+}
+
+
+
 @keyframes showButton {
+  0% {
+    opacity: 0;
+  }
 
   100% {
     opacity: 1;

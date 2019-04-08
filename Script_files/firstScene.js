@@ -4,17 +4,29 @@ const btn1 = document.getElementById("start");
 const audioBegining = document.getElementById("audioBegining");
 const boy = document.getElementById("boy");
 
+window.addEventListener("load", btn1.classList.add("startButtonDisplayNone"))
 key.style.display = "none";
 document.getElementById("twins").style.display = "none";
 document.getElementById("boy").style.display = "none";
 
+
+
+setTimeout(() => {
+  btn1.classList.add("startButtonDisplay")
+}, 7000);
+
 boy.classList.add("boy1");
 
+
+
 btn1.onclick = function () {
+
+  btn1.classList.remove("startButtonDisplay");
+  btn1.classList.add("startButtonDisplayNone");
+
   key.style.display = "block";
   document.getElementById("twins").style.display = "block";
   boy.style.display = "block";
-  btn1.style.display = "none";
   document.getElementById("instructions").style.display = "none";
   bg.removeChild(audioBegining);
 
