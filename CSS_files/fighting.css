@@ -827,7 +827,7 @@ body {
   position: absolute;
   bottom: -29%;
   left: 4.5%;
-  animation: axing 1s 2.5s steps(8) 15;
+  animation: axing 1s 2.5s steps(8) 11;
 
   width: 812.375px;
   height: 1012px;
