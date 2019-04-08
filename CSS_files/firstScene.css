@@ -43,7 +43,7 @@
   height: 300px;
   transition: all;
   justify-content: center;
-  animation: showButton 1s 15s linear forwards;
+  animation: showButton 1s 8s linear forwards;
   cursor: pointer;
 }
 
