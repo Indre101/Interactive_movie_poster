@@ -2,6 +2,7 @@ const finding = document.querySelector("#findMother");
 const up1 = document.getElementById("upTony");
 const body1 = document.querySelector("body");
 const axe = document.getElementById("axeDisplay")
+const audioDoorGame = new Audio("././audio/Landing_page_stage_1_music.mp3");
 
 window.addEventListener("load", axe.classList.add("axenodisplay"));
 
@@ -15,7 +16,8 @@ function doorGame(event) {
 
       setTimeout(() => {
         body1.classList.add("moveDown");
-
+        audio4.pause();
+        audioDoorGame.play();
       }, 1000);
       // setTimeout(() => {
       //   danny1.style.display = "none";
@@ -172,8 +174,10 @@ const gameOver = status => {
     finding.style.position = "absolute";
 
     setTimeout(() => {
+
       axe.classList.remove("axenodisplay");
       axe.classList.add("moveLeft");
+      audioDoorGame.pause();
       audioAxe.play();
 
     }, 1500);

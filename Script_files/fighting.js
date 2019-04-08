@@ -177,6 +177,8 @@ function transitionToMaze(event) {
       axe1.style.position = "absolute";
 
       setTimeout(() => {
+        audioDoorGame.play();
+        audioAxe.pause();
         runningTowardsMaze.classList.remove("axenodisplay");
         runningTowardsMaze.style.display = "flex";
       }, 1000);
