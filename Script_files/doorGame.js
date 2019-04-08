@@ -7,6 +7,7 @@ const audioDoorGame = new Audio("././audio/Landing_page_stage_1_music.mp3");
 window.addEventListener("load", axe.classList.add("axenodisplay"));
 
 
+
 up1.addEventListener("animationend", doorGame, false);
 
 function doorGame(event) {
@@ -47,6 +48,11 @@ let thirdDoor = document.getElementById("thirdDoor");
 let startButton = document.getElementById("startDoor");
 let currentPlay = true;
 
+
+firstDoor.style.pointerEvents = "none";
+secondDoor.style.pointerEvents = "none";
+thirdDoor.style.pointerEvents = "none";
+
 //  start button geting clicked
 
 const notStarted = () => {
@@ -64,6 +70,9 @@ function noDoubleClicking(event) {
 
 const startClicked = () => {
   startButton.textContent = "Good Luck!";
+  firstDoor.style.pointerEvents = "auto";
+  secondDoor.style.pointerEvents = "auto";
+  thirdDoor.style.pointerEvents = "auto";
 };
 
 // door functionality
