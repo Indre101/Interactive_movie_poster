@@ -43,7 +43,7 @@
   height: 300px;
   transition: all;
   justify-content: center;
-  animation: showButton 1s 25s linear forwards;
+  animation: showButton 1s 15s linear forwards;
   cursor: pointer;
 }
 
@@ -259,17 +259,7 @@ h3 {
 
 }
 
-.anim-typewriter4 {
-  animation: typewriter 4s 17s steps(64) 1 normal both,
-    blinkTextCursor 500ms 17s steps(30) 10 forwards;
 
-}
-
-.anim-typewriter5 {
-  animation: typewriter 3s 21s steps(64) 1 normal both,
-    blinkTextCursor 500ms 21s steps(30) 10 forwards;
-
-}
 
 
 

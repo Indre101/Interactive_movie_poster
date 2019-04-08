@@ -193,7 +193,7 @@ const gameOver = status => {
 
 
   } else {
-    startButton.textContent = "Game over! play again?";
+    startButton.textContent = "Try again?";
     pointsArray = [];
   }
   currentPlay = false;
