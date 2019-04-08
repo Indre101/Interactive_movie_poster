@@ -188,3 +188,28 @@
     transform: translate(-100px, 0);
   }
 }
+
+.callToAction {
+  text-align: center;
+  line-height: 2em;
+  float: right;
+  opacity: 0;
+  width: 500px;
+  background-color: #5d130f;
+  animation: appearCall 1s 2s linear forwards 1;
+}
+
+.callToAction h2 {
+  color: white;
+}
+
+
+@keyframes appearCall {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

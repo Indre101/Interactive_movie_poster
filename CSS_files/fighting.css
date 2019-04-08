@@ -921,6 +921,7 @@ extra*/
   opacity: 0;
   animation: appearMaze 2s linear 1 forwards;
 
+
 }
 
 @keyframes appearMaze {
