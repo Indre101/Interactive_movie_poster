@@ -11,14 +11,20 @@ function listener(event) {
   switch (event.type) {
     case "animationend":
       console.log(i);
+      setTimeout(() => {
+        document.getElementById("callToaction").style.display = "block";
+        bgEnding.style.position = "absolute";
 
-      if (i == 2) {
+      }, 4000);
+
+      if (k == 2) {
         clear();
       } else {
         k = 1;
         car.classList.remove("car1");
         car.classList.add("car2");
         car.style.backgroundImage = "url('././images/snowmobileturn.png')"
+
       }
       break;
 

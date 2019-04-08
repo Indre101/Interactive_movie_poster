@@ -188,3 +188,28 @@
     transform: translate(-100px, 0);
   }
 }
+
+.callToaction {
+  display: none;
+  opacity: 0;
+  background-color: black;
+  overflow: hidden;
+  margin: 1em;
+  background-image: url(../images/stage-3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  widows: 100vw;
+  height: 100vh;
+  animation: appearCallto 1s linear 1 forwards;
+}
+
+@keyframes appearCallto {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
