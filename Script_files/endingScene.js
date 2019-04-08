@@ -15,7 +15,7 @@ function listener(event) {
         document.getElementById("callToaction").style.display = "block";
         bgEnding.style.position = "absolute";
 
-      }, 4000);
+      }, 5000);
 
       if (k == 2) {
         clear();
