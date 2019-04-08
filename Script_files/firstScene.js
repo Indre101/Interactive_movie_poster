@@ -13,7 +13,7 @@ document.getElementById("boy").style.display = "none";
 
 setTimeout(() => {
   btn1.classList.add("startButtonDisplay")
-}, 7000);
+}, 25000);
 
 boy.classList.add("boy1");
 
