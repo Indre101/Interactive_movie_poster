@@ -20,7 +20,7 @@ function showingMazeGame(event) {
 
       setTimeout(() => {
         mazeGameContainer1.style.display = "block";
-      }, 3000);
+      }, 1000);
       break;
   }
 }
