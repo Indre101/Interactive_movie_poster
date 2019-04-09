@@ -710,7 +710,7 @@ body {
 .findMother {
   display: none;
   opacity: 0;
-  background-image: url(../images/grassfrozen.jpg);
+  background-image: url(../images/bgdoorgame.png);
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -914,7 +914,7 @@ extra*/
   display: none;
   margin: 0 auto;
   text-align: center;
-  background-image: url("../images/grassfrozen.jpg");
+  background-image: url("../images/snowbackground-02.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;

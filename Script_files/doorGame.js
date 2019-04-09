@@ -39,7 +39,7 @@ let door1;
 let door2;
 let door3;
 
-let closed = "./images/door.jpg";
+let closed = "./images/doors.png";
 let numOfClosedDoors = 3;
 
 let firstDoor = document.getElementById("firstDoor");
