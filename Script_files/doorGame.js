@@ -31,9 +31,9 @@ function doorGame(event) {
 
 
 
-let mother = "./images/fighting/wendy-06.png";
-let evil1 = "./images/jackwithaxe-05.png"
-let evil2 = "./images/twins.png";
+let mother = "./images/wendyopenarms-10.png";
+let evil1 = "./images/jackaxe-11.png";
+let evil2 = "./images/bloodytwins-12.png";
 
 let door1;
 let door2;
