@@ -49,7 +49,7 @@ function wendyListener(event) {
 
       wendy.classList.remove("crying1");
       wendy.style.backgroundImage =
-        "url(././images/fighting/wendy-06_back.png)";
+        "url(././images/wendywithbat-07_side.png)";
       wendy.classList.add("crying2");
 
       if (i === 3) {
