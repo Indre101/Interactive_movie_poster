@@ -60,10 +60,10 @@ const canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 const childRunning = new Image();
-childRunning.src = "./images/boySide.png";
+childRunning.src = "./images/boy-maze.png";
 
 let motherWating = new Image();
-motherWating.src = "./images/running_towards_maze/wendywalking-03.png";
+motherWating.src = "./images/wendyopenarms-maze.png";
 
 let wall = new Image;
 

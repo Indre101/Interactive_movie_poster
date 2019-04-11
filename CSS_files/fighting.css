@@ -73,12 +73,14 @@ body {
 
 .jack {
   grid-area: 1/2 / span 1 / span 1;
-  background-image: url(../images/fighting/jack-03.png);
-  max-width: 500px;
-  max-height: 600px;
-  background-size: cover;
+  background-image: url(../images/fighting/jackjack-08.png);
+  max-width: 380px;
+  max-height: 500px;
+  background-size: contain;
   align-self: flex-end;
   justify-self: flex-start;
+  margin-bottom: 5vh;
+  z-index: 1000;
 }
 
 /* jack jumping */
@@ -110,7 +112,7 @@ body {
   }
 
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-50px);
   }
 }
 
